@@ -5,21 +5,20 @@
  */
 
 /* 
- * File:   main.cpp
+ * File:   Enemigo.cpp
  * Author: José Antonio
- *
- * Created on 27 de febrero de 2019, 21:11
- */
-
-#include <iostream>
-
-using namespace std;
-
-/*
  * 
+ * Created on 27 de febrero de 2019, 21:23
  */
-int main(int argc, char** argv) {
 
-    return 0;
+#include "Enemigo.h"
+
+Enemigo::Enemigo() {
+}
+
+Enemigo::Enemigo(const Enemigo& orig) {
+}
+
+Enemigo::~Enemigo() {
 }
 
