@@ -44,4 +44,9 @@ class Enemigo{
     -int posY=1
 }
 
+class Arma{
+    -string nombre
+    -int damage
+}
+
 @enduml
