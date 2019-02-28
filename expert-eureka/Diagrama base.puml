@@ -45,6 +45,8 @@ class Enemigo{
 }
 
 class Arma{
+    +string getNombre()
+    +int getDamage()
     -string nombre
     -int damage
 }
