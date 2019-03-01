@@ -37,6 +37,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/Arma.o \
 	${OBJECTDIR}/Enemigo.o \
+	${OBJECTDIR}/FuncionesAuxiliares.o \
 	${OBJECTDIR}/PersonajeVideojuego.o \
 	${OBJECTDIR}/main.o
 
@@ -74,6 +75,11 @@ ${OBJECTDIR}/Enemigo.o: Enemigo.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Enemigo.o Enemigo.cpp
+
+${OBJECTDIR}/FuncionesAuxiliares.o: FuncionesAuxiliares.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/FuncionesAuxiliares.o FuncionesAuxiliares.cpp
 
 ${OBJECTDIR}/PersonajeVideojuego.o: PersonajeVideojuego.cpp
 	${MKDIR} -p ${OBJECTDIR}

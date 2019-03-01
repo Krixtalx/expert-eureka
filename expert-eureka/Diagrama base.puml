@@ -9,9 +9,8 @@ class PersonajeVideojuego{
     +void movimiento(int x, int y)
     +int getVida()
     +int getMana()
-    +int incrementarVida()
-    +int incrementarMana()
-    +void setDamageArma()
+    +void incrementarVida()
+    +void incrementarMana()
     +void ataqueBasico(Enemigo golpeado)
     +void hab1(Enemigo golpeado)
     +void hab2(Enemigo golpeado)
@@ -23,7 +22,7 @@ class PersonajeVideojuego{
     -int vidaMax=100
     -int manaAct=50
     -int manaMax=50
-    -int damageArma=10
+    -Arma armaEquipada
     -float damageHab1=1,2
     -int consumoHab1=10
     -float damageHab2=1,5
