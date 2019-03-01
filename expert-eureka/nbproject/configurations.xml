@@ -5,15 +5,15 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>Arma.h</itemPath>
-    </logicalFolder>
-    <logicalFolder name="ResourceFiles"
-                   displayName="Resource Files"
-                   projectFiles="true">
+      <itemPath>Enemigo.h</itemPath>
+      <itemPath>PersonajeVideojuego.h</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>Arma.cpp</itemPath>
+      <itemPath>Enemigo.cpp</itemPath>
+      <itemPath>PersonajeVideojuego.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -29,6 +29,9 @@
     </logicalFolder>
     <itemPath>Diagrama base.puml</itemPath>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Debug" type="1">
@@ -47,6 +50,14 @@
       <item path="Arma.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Diagrama base.puml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Enemigo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Enemigo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PersonajeVideojuego.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PersonajeVideojuego.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -77,6 +88,14 @@
       <item path="Arma.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Diagrama base.puml" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Enemigo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Enemigo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PersonajeVideojuego.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PersonajeVideojuego.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
