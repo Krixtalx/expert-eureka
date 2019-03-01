@@ -14,6 +14,8 @@
 #include <iostream>
 
 #include "Arma.h"
+#include "Enemigo.h"
+#include "PersonajeVideojuego.h"
 
 using namespace std;
 
@@ -23,18 +25,22 @@ using namespace std;
 int main(int argc, char** argv) {
 
     Arma arma1;
-    Arma arma2 = arma1;
+    PersonajeVideojuego heroe(5,6,200,0, &arma1);
+    Enemigo Limo(25,0,10);
     
     std::cout << "Nombre: " << arma1.getNombre() << endl;
-    std::cout << "Daño: " << arma1.getDamage() << endl;
+    std::cout << "Daño: " << arma1.getDamage() << endl<<endl;
     
-    arma1.setDamage(10);
+    std::cout << "posX: " << heroe.GetPosX() << endl;
+    std::cout << "posY: " << heroe.GetPosY() << endl;
+    std::cout << "Vida: " << heroe.GetVidaMax() << endl;
+    std::cout << "Mana: " << heroe.GetManaMax() << endl;
+    std::cout << "Damage: " << heroe.GetDamage() << endl<<endl;
+    heroe.hab2(Limo);
     
-    std::cout << "Nombre: " << arma2.getNombre() << endl;
-    std::cout << "Daño: " << arma2.getDamage() << endl;
-    
-    
-    
+    std::cout << "Vida: " << Limo.GetVida() << endl;
+    std::cout << "Mana: " << Limo.GetMana() << endl;
+       
     return 0;
 }
 
