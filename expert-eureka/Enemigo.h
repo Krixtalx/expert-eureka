@@ -20,14 +20,16 @@ public:
     Enemigo(int vida, int mana, int damageBasico);
     Enemigo(const Enemigo& orig);
     virtual ~Enemigo();
+    
     int GetMana() const;
     int GetVida() const;
+    
     Enemigo& setPosicion(int posX, int posY);
+    void SetVida(int vida);
     
     
     
 private:
-    
     int vida = 40;
     int mana = 0;
     int damageBasico = 5;

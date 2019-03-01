@@ -44,4 +44,8 @@ Enemigo& Enemigo::setPosicion(int posX, int posY) {
     return *this;
 }
 
+void Enemigo::SetVida(int vida) {
+    this->vida = vida;
+}
+
 
