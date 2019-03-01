@@ -13,7 +13,8 @@
 
 #include "Enemigo.h"
 
-Enemigo::Enemigo() {
+Enemigo::Enemigo(int vida, int mana, int damageBasico):
+vida(vida), mana(mana), damageBasico(damageBasico) {
 }
 
 Enemigo::Enemigo(const Enemigo& orig) {
@@ -21,4 +22,26 @@ Enemigo::Enemigo(const Enemigo& orig) {
 
 Enemigo::~Enemigo() {
 }
+
+int Enemigo::GetMana() const {
+    return mana;
+}
+
+int Enemigo::GetVida() const {
+    return vida;
+}
+
+
+/**
+ * @brief Establece la posición del personaje. Se puede utilizar en cascada
+ * @param[in] posX
+ * @param[in] posY
+ */
+Enemigo& Enemigo::setPosicion(int posX, int posY) {
+    this->posX = posX;
+    this->posY = posY;
+    
+    return *this;
+}
+
 

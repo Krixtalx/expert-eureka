@@ -16,11 +16,24 @@
 
 class Enemigo {
 public:
-    Enemigo();
+    Enemigo() = default;
+    Enemigo(int vida, int mana, int damageBasico);
     Enemigo(const Enemigo& orig);
     virtual ~Enemigo();
+    int GetMana() const;
+    int GetVida() const;
+    Enemigo& setPosicion(int posX, int posY);
+    
+    
+    
 private:
-
+    
+    int vida = 40;
+    int mana = 0;
+    int damageBasico = 5;
+    int posX = 1;
+    int posY = 1;
+    
 };
 
 #endif /* ENEMIGO_H */

@@ -13,6 +13,8 @@
 
 #include <iostream>
 
+#include "Arma.h"
+
 using namespace std;
 
 /*
@@ -20,6 +22,19 @@ using namespace std;
  */
 int main(int argc, char** argv) {
 
+    Arma arma1;
+    Arma arma2 = arma1;
+    
+    std::cout << "Nombre: " << arma1.getNombre() << endl;
+    std::cout << "Daño: " << arma1.getDamage() << endl;
+    
+    arma1.setDamage(10);
+    
+    std::cout << "Nombre: " << arma2.getNombre() << endl;
+    std::cout << "Daño: " << arma2.getDamage() << endl;
+    
+    
+    
     return 0;
 }
 
