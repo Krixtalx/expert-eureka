@@ -15,13 +15,15 @@
 #include <iostream>
 #include "Arma.h"
 
-Arma::Arma(std::string nombre, int damage):
+Arma::Arma(std::string nombre, int damage) :
 nombre(nombre), damage(damage) {
 
 }
 
-
 Arma::Arma(const Arma& orig) {
+
+    throw std::string("Arma::Arma, llamando al constructor de copia no implementado");
+
 }
 
 Arma::~Arma() {
@@ -41,10 +43,10 @@ std::string Arma::getNombre() const {
  * @return Devuelve el objeto.
  */
 Arma& Arma::setDamage(int damage) {
-    
-    if(damage <= 0)
-        throw std::string ("Arma::setDamage, variable damage <= 0");
-    
+
+    if (damage <= 0)
+        throw std::string("Arma::setDamage, variable damage <= 0");
+
     this->damage = damage;
     return *this;
 }

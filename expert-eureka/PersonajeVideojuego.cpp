@@ -19,9 +19,9 @@
 /**
  * @Brief Constructor por defecto de la clase PersonajeVideojuego
  */
-PersonajeVideojuego::PersonajeVideojuego(): 
-posX (0), posY (0), vidaMax (100), manaMax (50){
-    
+PersonajeVideojuego::PersonajeVideojuego() :
+posX(0), posY(0), vidaMax(100), manaMax(50) {
+
 }
 
 /**
@@ -32,8 +32,8 @@ posX (0), posY (0), vidaMax (100), manaMax (50){
  * @param mana: Mana con el que inicializar el objeto
  * @param Arma: Puntero a un objeto de la clase Arma (Arma.h) 
  */
-PersonajeVideojuego::PersonajeVideojuego(int x, int y, int vida, int mana, Arma* Arma):
-    posX (x), posY (y), vidaMax (vida), manaMax (mana), armaEquipada (Arma){
+PersonajeVideojuego::PersonajeVideojuego(std::string nombre, int x, int y, int vida, int mana, Arma* Arma) :
+nombre(nombre), posX(x), posY(y), vidaMax(vida), manaMax(mana), armaEquipada(Arma) {
 
 }
 
@@ -41,21 +41,32 @@ int PersonajeVideojuego::GetDamage() const {
     return this->armaEquipada->getDamage();
 }
 
+PersonajeVideojuego& PersonajeVideojuego::setNombre(std::string nombre) {
+
+    if (nombre.length() == 0)
+        throw std::string("PersonajeVideojuego::setNombre, variable nombre vacía");
+
+    this->nombre = nombre;
+}
+
+std::string PersonajeVideojuego::getNombre() const {
+    return nombre;
+}
 
 void PersonajeVideojuego::ataqueBasico(Enemigo& golpeado) {
-    golpeado.SetVida(golpeado.GetVida() - this->GetDamage());
+    golpeado.SetVida(golpeado.getVida() - this->GetDamage());
 }
 
 void PersonajeVideojuego::hab1(Enemigo& golpeado) {
     if (manaAct >= consumoHab1) {
-        golpeado.SetVida(golpeado.GetVida() - this->GetDamage() * this->damageHab1);
+        golpeado.SetVida(golpeado.getVida() - this->GetDamage() * this->damageHab1);
         manaAct -= consumoHab1;
     }
 }
 
 void PersonajeVideojuego::hab2(Enemigo& golpeado) {
     if (manaAct >= consumoHab2) {
-        golpeado.SetVida(golpeado.GetVida() - this->GetDamage() * this->damageHab2);
+        golpeado.SetVida(golpeado.getVida() - this->GetDamage() * this->damageHab2);
         manaAct -= consumoHab2;
     }
 }

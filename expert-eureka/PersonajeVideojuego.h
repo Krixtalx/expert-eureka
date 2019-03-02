@@ -17,13 +17,15 @@
 #include "Arma.h"
 #include "Enemigo.h"
 
+#include <string>
+
 class PersonajeVideojuego {
 public:
     PersonajeVideojuego();
-    PersonajeVideojuego(int x, int y, int vida, int mana, Arma* Arma);
+    PersonajeVideojuego(std::string nombre, int x, int y, int vida, int mana, Arma* Arma);
     PersonajeVideojuego(const PersonajeVideojuego& orig);
     virtual ~PersonajeVideojuego();
-    
+
     void movimiento(int x, int y);
     void ataqueBasico(Enemigo& golpeado);
     void hab1(Enemigo& golpeado);
@@ -31,7 +33,8 @@ public:
     void equiparArma(Arma* arma);
     void incrementarVida(int cantidad);
     void incrementarMana(int cantidad);
-    
+
+
     int GetManaMax() const;
     int GetManaAct() const;
     int GetVidaMax() const;
@@ -39,19 +42,23 @@ public:
     int GetPosY() const;
     int GetPosX() const;
     int GetDamage()const;
-    
+    PersonajeVideojuego& setNombre(std::string nombre);
+    std::string getNombre() const;
+
 private:
-    int posX=0;
-    int posY=0;
-    int vidaAct=100;
-    int vidaMax=100;
-    int manaAct=50;
-    int manaMax=50;
+
+    std::string nombre = "Izuku";
+    int posX = 0;
+    int posY = 0;
+    int vidaAct = 100;
+    int vidaMax = 100;
+    int manaAct = 50;
+    int manaMax = 50;
     Arma* armaEquipada;
-    float damageHab1=1.2;
-    int consumoHab1=10;
-    float damageHab2=1.5;
-    int consumoHab2=20;
+    float damageHab1 = 1.2;
+    int consumoHab1 = 10;
+    float damageHab2 = 1.5;
+    int consumoHab2 = 20;
 };
 
 #endif /* PERSONAJEVIDEOJUEGO_H */

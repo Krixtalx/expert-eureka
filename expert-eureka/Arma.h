@@ -22,18 +22,18 @@ public:
     Arma(std::string nombre, int damage);
     Arma(const Arma& orig);
     virtual ~Arma();
-    
+
     int getDamage() const;
     std::string getNombre() const;
     Arma& setDamage(int damage);
-    
-    
-    
+
+
+
 private:
 
     std::string nombre = "La Infernus beibe";
     int damage = 6;
-    
+
 };
 
 #endif /* ARMA_H */
