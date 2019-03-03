@@ -29,6 +29,7 @@ int main(int argc, char** argv) {
     Arma armaPorDefecto;
     Arma bastonMagico("Baston Magico",12);
     Arma EspadaLegendaria("Excalibur",25);
+    Enemigo Limo("Limo", 70,0,6);
     
     cout <<"Introduzca el nombre del Héroe: ";
     getline(cin>>ws, nombre);
@@ -36,6 +37,9 @@ int main(int argc, char** argv) {
     PersonajeVideojuego Heroe(nombre, 0, 0, 100,50,&armaPorDefecto);
     
     movimientoPersonaje(Heroe);
+    if (spawner()){
+        combate(Heroe, Limo);
+    }
     
 
 //    try {

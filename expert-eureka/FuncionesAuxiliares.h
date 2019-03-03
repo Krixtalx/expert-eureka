@@ -17,5 +17,9 @@
 #include "PersonajeVideojuego.h"
 
 void ScreenClear();
+bool spawner();
+void vidaEnemigo(Enemigo& malo);
+void atribHeroe(PersonajeVideojuego& heroe);
+void combate(PersonajeVideojuego& heroe, Enemigo& malo);
 void movimientoPersonaje(PersonajeVideojuego& heroe);
 #endif /* FUNCIONESAUXILIARES_H */

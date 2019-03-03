@@ -30,6 +30,33 @@ void ScreenClear() {
     }
 }
 
+bool  spawner(){
+    int aux=rand()%100;
+    if(aux<60)
+        return true;
+    return false;
+}
+
+void vidaEnemigo(Enemigo& malo){
+    cout <<endl<<"Vida enemigo: "<<malo.getVida();
+}
+
+void atribHeroe(PersonajeVideojuego& heroe){
+    cout<<endl<< "Vida de "<<heroe.getNombre()<<": "<<heroe.GetVidaAct();
+    cout<<"        "<< "Mana de "<<heroe.getNombre()<<": "<<heroe.GetManaAct();
+}
+
+void combate(PersonajeVideojuego& heroe, Enemigo& malo){
+    ScreenClear();
+    cout <<malo.getNombre()<<" aparecio en combate";
+    vidaEnemigo(malo);
+    atribHeroe(heroe);
+    cout <<endl<<"1. Ataque básico";
+    cout <<endl<<"2. Habilidad 1";
+    cout <<endl<<"3. Habilidad 2";
+    cout <<endl<<"Que desea hacer?: ";
+}
+
 void movimientoPersonaje(PersonajeVideojuego& heroe) {
     ScreenClear();
     cout << "Actualmente se encuentra en la posicion x: " << heroe.GetPosX() << "  y: " << heroe.GetPosY() << endl;
