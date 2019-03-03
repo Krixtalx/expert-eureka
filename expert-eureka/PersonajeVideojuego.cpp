@@ -20,7 +20,7 @@
  * @Brief Constructor por defecto de la clase PersonajeVideojuego
  */
 PersonajeVideojuego::PersonajeVideojuego() :
-posX(0), posY(0), vidaMax(100), manaMax(50) {
+posX(0), posY(0), vidaMax(100), vidaAct(100), manaMax(50), manaAct(100) {
 
 }
 
@@ -33,13 +33,20 @@ posX(0), posY(0), vidaMax(100), manaMax(50) {
  * @param Arma: Puntero a un objeto de la clase Arma (Arma.h) 
  */
 PersonajeVideojuego::PersonajeVideojuego(std::string nombre, int x, int y, int vida, int mana, Arma* Arma) :
-nombre(nombre), posX(x), posY(y), vidaMax(vida), manaAct(mana), armaEquipada(Arma) {
-    
-    if(mana > manaMax)
-        throw std::string ("PersonajeVideojuego::PersonajeVideojuego, el maná establecido es mayor al máx");
-    else if(nombre.length() == 0)
-        throw std::string ("PersonajeVideojuego::PersonajeVideojuego, el nombre establecido es cadena vacía");
+nombre(nombre), posX(x), posY(y), vidaMax(vida), vidaAct(vida), manaMax(mana), manaAct(mana), armaEquipada(Arma) {
 
+    if (nombre.length() == 0)
+        throw std::string("PersonajeVideojuego::PersonajeVideojuego, el nombre establecido es cadena vacía");
+
+}
+/**
+ * @Brief Método encargado de cambiar las posiciones x e y
+ * @param x: Cantidad en la que se incrementara posX
+ * @param y: Cantidad en la que se incrementara posy
+ */
+void PersonajeVideojuego::movimiento(int x, int y){
+    this->posX+=x;
+    this->posY+=y;
 }
 
 int PersonajeVideojuego::GetDamage() const {

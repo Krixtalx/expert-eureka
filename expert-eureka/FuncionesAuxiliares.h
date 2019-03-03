@@ -14,4 +14,8 @@
 #ifndef FUNCIONESAUXILIARES_H
 #define FUNCIONESAUXILIARES_H
 
+#include "PersonajeVideojuego.h"
+
+void ScreenClear();
+void movimientoPersonaje(PersonajeVideojuego& heroe);
 #endif /* FUNCIONESAUXILIARES_H */
