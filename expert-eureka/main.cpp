@@ -24,25 +24,41 @@ using namespace std;
  */
 int main(int argc, char** argv) {
 
-    Arma arma1;
-    PersonajeVideojuego Goku("Goku", 1, 1, 100, 100, &arma1);
-    Enemigo Freezer("Freezer", 100, 50, 6);
+    try {
+        
+        Arma arma1;
+        PersonajeVideojuego Goku("Goku", 1, 1, 100, 50, &arma1);
+        PersonajeVideojuego* Trunks = new PersonajeVideojuego("Trunks", 1, 1, 100, 50, &arma1);
+        PersonajeVideojuego Equipo[2] = { {"Vegeta", 1, 1, 100, 50, &arma1}, {"Son Goten", 1, 1, 100, 50, &arma1} };
 
-    cout << "       " << Goku.getNombre() << "\n\n";
-    cout << "Salud: " << Goku.GetVidaAct() << "\n"
-         << "Daño: " << Goku.GetDamage() << "\n";
-    
-    cout << "       " << Freezer.getNombre() << "\n\n";
-    cout << "Salud: " << Freezer.getVida() << "\n"
-         << "Daño: " << Freezer.getDamage() << "\n";
-    
-    Goku.ataqueBasico(Freezer);
-    
-    cout << Freezer.getNombre() << " ha perdido vida, ahora tiene: " << Freezer.getVida() << endl;
-    
-    Goku.hab2(Freezer);
-            
-    cout << Freezer.getNombre() << " ha perdido vida, ahora tiene: " << Freezer.getVida() << endl;
+        Enemigo Freezer("Freezer", 100, 50, 6);
+
+        cout << Goku.getNombre() << " está siendo ayudado por: " << Trunks->getNombre() << ", " << Equipo[0].getNombre() << 
+                " y " << Equipo[1].getNombre() << endl;
+
+        cout << "El enemigo " << Freezer.getNombre() << " ha aparecido." << endl;
+
+        cout << Goku.getNombre() << " se dispone a atacar." << endl;
+        
+        Goku.ataqueBasico(Freezer);
+        
+        cout << Freezer.getNombre() << " ha recibido daño, vida restante: " << Freezer.getVida() << endl;
+        
+        cout << Equipo[1].getNombre() << " se dispone a atacar." << endl;
+        
+        Equipo[1].hab1(Freezer);
+        
+        cout << Freezer.getNombre() << " ha sufrido un gran golpe, vida restante: " << Freezer.getVida() << endl;
+        
+        cout << Trunks->getNombre() << " se ha retirado del combate para ir al futuro" << endl;
+                
+        delete Trunks;
+        
+    }catch (std::string& error) {
+        
+        cerr << "Error: " + error;
+        
+    }
     
     //    Arma arma1;
     //    PersonajeVideojuego heroe(5,6,200,0, &arma1);

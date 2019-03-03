@@ -33,7 +33,12 @@ posX(0), posY(0), vidaMax(100), manaMax(50) {
  * @param Arma: Puntero a un objeto de la clase Arma (Arma.h) 
  */
 PersonajeVideojuego::PersonajeVideojuego(std::string nombre, int x, int y, int vida, int mana, Arma* Arma) :
-nombre(nombre), posX(x), posY(y), vidaMax(vida), manaMax(mana), armaEquipada(Arma) {
+nombre(nombre), posX(x), posY(y), vidaMax(vida), manaAct(mana), armaEquipada(Arma) {
+    
+    if(mana > manaMax)
+        throw std::string ("PersonajeVideojuego::PersonajeVideojuego, el maná establecido es mayor al máx");
+    else if(nombre.length() == 0)
+        throw std::string ("PersonajeVideojuego::PersonajeVideojuego, el nombre establecido es cadena vacía");
 
 }
 
