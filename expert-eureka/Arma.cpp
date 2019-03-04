@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
  * File:   Arma.cpp
  * Author: david
@@ -15,11 +9,20 @@
 #include <iostream>
 #include "Arma.h"
 
+/**
+ * @brief Constructor parametrizado de la clase Arma
+ * @param nombre: Nombre del arma creada
+ * @param damage: Daño del arma creada
+ */
 Arma::Arma(std::string nombre, int damage) :
 nombre(nombre), damage(damage) {
 
 }
 
+/**
+ * @brief Constructor de copia de la clase Arma (No implementado)
+ * @param orig: Arma del que se hará la copia
+ */
 Arma::Arma(const Arma& orig) {
 
     throw std::string("Arma::Arma, llamando al constructor de copia no implementado");
@@ -29,10 +32,18 @@ Arma::Arma(const Arma& orig) {
 Arma::~Arma() {
 }
 
+/**
+ * @brief Getter del atributo damage
+ * @return damage
+ */
 int Arma::getDamage() const {
     return damage;
 }
 
+/**
+ * @brief Getter del atributo nombre
+ * @return nombre
+ */
 std::string Arma::getNombre() const {
     return nombre;
 }

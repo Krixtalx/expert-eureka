@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
  * File:   PersonajeVideojuego.cpp
  * Author: José Antonio
@@ -47,11 +41,19 @@ void PersonajeVideojuego::movimiento(int x, int y){
     this->posX+=x;
     this->posY+=y;
 }
-
+/**
+ * @brief Método que obtiene el daño del arma equipada
+ * @return Daño:int del arma equipada
+ */
 int PersonajeVideojuego::GetDamage() const {
     return this->armaEquipada->getDamage();
 }
 
+/**
+ * @brief Setter del atributo nombre 
+ * @param nombre: Nuevo nombre
+ * @return *this para encadenar setters
+ */
 PersonajeVideojuego& PersonajeVideojuego::setNombre(std::string nombre) {
 
     if (nombre.length() == 0)
@@ -60,26 +62,50 @@ PersonajeVideojuego& PersonajeVideojuego::setNombre(std::string nombre) {
     this->nombre = nombre;
 }
 
+/**
+ * @brief Getter del atributo nombre
+ * @return El nombre
+ */
 std::string PersonajeVideojuego::getNombre() const {
     return nombre;
 }
 
+/**
+ * @brief Setter del atributo VidaAct
+ * @param vidaAct: Nuevo valor de VidaAct
+ */
 void PersonajeVideojuego::setVidaAct(int vidaAct) {
     this->vidaAct = vidaAct;
 }
 
+/**
+ * @brief Getter del atributo consumoHab2
+ * @return consumoHab2
+ */
 int PersonajeVideojuego::getConsumoHab2() const {
     return consumoHab2;
 }
 
+/**
+ * @brief Getter del atributo consumoHab1
+ * @return consumoHab1
+ */
 int PersonajeVideojuego::getConsumoHab1() const {
     return consumoHab1;
 }
 
+/**
+ * @brief Metodo encargado de quitarle vida al "Enemigo" golpeado en función al daño del arma
+ * @param golpeado: Enemigo que recibirá el daño
+ */
 void PersonajeVideojuego::ataqueBasico(Enemigo& golpeado) {
     golpeado.SetVida(golpeado.getVida() - this->GetDamage());
 }
 
+/**
+ * @brief Metodo encargado de quitarle vida al "Enemigo" golpeado en función al daño del arma
+ * @param golpeado: Enemigo que recibirá el daño
+ */
 void PersonajeVideojuego::hab1(Enemigo& golpeado) {
     if (manaAct >= consumoHab1) {
         golpeado.SetVida(golpeado.getVida() - this->GetDamage() * this->damageHab1);
@@ -87,6 +113,10 @@ void PersonajeVideojuego::hab1(Enemigo& golpeado) {
     }
 }
 
+/**
+ * @brief Metodo encargado de quitarle vida al "Enemigo" golpeado en función al daño del arma
+ * @param golpeado: Enemigo que recibirá el daño
+ */
 void PersonajeVideojuego::hab2(Enemigo& golpeado) {
     if (manaAct >= consumoHab2) {
         golpeado.SetVida(golpeado.getVida() - this->GetDamage() * this->damageHab2);
@@ -94,37 +124,68 @@ void PersonajeVideojuego::hab2(Enemigo& golpeado) {
     }
 }
 
+/**
+ * @brief Constructor de copia (No implementado)
+ * @param orig: PersonajeVideojuego del que se hará la copia
+ */
 PersonajeVideojuego::PersonajeVideojuego(const PersonajeVideojuego& orig) {
     throw std::string("Error en constructor de copia de PersonajeVideojuego: No implementado");
 }
 
 PersonajeVideojuego::~PersonajeVideojuego() {
 }
-
+/**
+ * @brief Getter del atributo ManaMax 
+ * @return ManaMax
+ */
 int PersonajeVideojuego::GetManaMax() const {
     return manaMax;
 }
 
+/**
+ * @brief Getter del atributo ManaAct 
+ * @return ManaAct
+ */
 int PersonajeVideojuego::GetManaAct() const {
     return manaAct;
 }
 
+/**
+ * @brief Getter del atributo VidaMax 
+ * @return VidaMax
+ */
 int PersonajeVideojuego::GetVidaMax() const {
     return vidaMax;
 }
 
+/**
+ * @brief Getter del atributo VidaAct 
+ * @return VidaAct
+ */
 int PersonajeVideojuego::GetVidaAct() const {
     return vidaAct;
 }
 
+/**
+ * @brief Getter del atributo PosY
+ * @return PosY
+ */
 int PersonajeVideojuego::GetPosY() const {
     return posY;
 }
 
+/**
+ * @brief Getter del atributo PosX
+ * @return PosX
+ */
 int PersonajeVideojuego::GetPosX() const {
     return posX;
 }
 
+/**
+ * @brief Incrementa el mana actual según "cantidad"
+ * @param cantidad: int cuanto se incrementará el atributo manaAct
+ */
 void PersonajeVideojuego::incrementarMana(int cantidad) {
     
     if(manaAct + cantidad >= manaMax)

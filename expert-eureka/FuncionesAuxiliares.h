@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
  * File:   FuncionesAuxiliares.h
  * Author: José Antonio
@@ -24,7 +18,7 @@ bool spawner();
 void ataqueMalo(PersonajeVideojuego& heroe, Enemigo& malo);
 void vidaEnemigo(PersonajeVideojuego& malo);
 void atribHeroe(PersonajeVideojuego& heroe);
-void combate(PersonajeVideojuego& heroe, Enemigo& malo);
+void combate(PersonajeVideojuego& heroe, Enemigo malo);
 void movimientoPersonaje(PersonajeVideojuego& heroe);
 void finCombate(PersonajeVideojuego& heroe, Enemigo& malo, bool& terminar);
 

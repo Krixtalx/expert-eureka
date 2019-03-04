@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
  * File:   FuncionesAuxiliares.cpp
  * Author: José Antonio
@@ -20,7 +14,9 @@
 using std::cout;
 using std::endl;
 using std::cin;
-
+/**
+ * @brief Función encargada de limpiar la consola
+ */
 void ScreenClear() {
     bool windows = false;
 
@@ -31,6 +27,10 @@ void ScreenClear() {
     }
 }
 
+/**
+ * @brief Funcion encargada de decidir aleatoriamente si se genera un enemigo o no.
+ * @return True si se genera, false si no
+ */
 bool  spawner(){
     
     int aux=rand()%100;
@@ -40,20 +40,38 @@ bool  spawner(){
     return false;
 }
 
+/**
+ * @brief Funcion encargada del daño del Enemigo al PersonajeVideojuego
+ * @param heroe: PersonajeVideojuego que recibirá el daño
+ * @param malo: Enemigo que hará el daño
+ */
 void ataqueMalo(PersonajeVideojuego& heroe, Enemigo& malo){
     heroe.setVidaAct(heroe.GetVidaAct()-malo.getDamage());
 }
 
+/**
+ * @brief Función encargada de mostrar la vida del enemigo
+ * @param malo: Enemigo del que se mostrará la vida
+ */
 void vidaEnemigo(Enemigo& malo){
     cout <<endl<<"Vida enemigo: "<<malo.getVida();
 }
 
+/**
+ * @brief Función encargada de mostrar la vida y maná actual del personaje
+ * @param heroe:
+ */
 void atribHeroe(PersonajeVideojuego& heroe){
     cout<<endl<< "Vida de "<<heroe.getNombre()<<": "<<heroe.GetVidaAct();
     cout<<"        "<< "Mana de "<<heroe.getNombre()<<": "<<heroe.GetManaAct();
 }
 
-void combate(PersonajeVideojuego& heroe, Enemigo& malo){
+/**
+ * @brief Función encargada de iniciar el combate 
+ * @param heroe: PersonajeVideojuego con el que se interaccionará
+ * @param malo: Enemigo con el que se interaccionará
+ */
+void combate(PersonajeVideojuego& heroe, Enemigo malo){
     ScreenClear();
     
     int opcionMenu = 0;
@@ -107,45 +125,58 @@ void combate(PersonajeVideojuego& heroe, Enemigo& malo){
                     ScreenClear();
                     cout << malo.getNombre() << " ha recibido daño de habilidad 2, vida restante: " << malo.getVida() << endl;
                     break;
-                case 2209: //Shhhh... Esto es secreto :)
+                    
+                case 8085: //Shhhh... Esto es secreto :)
                     heroe.incrementarMana(50);
+                    break;
+                    
+                case 69: //Shhhh... Esto es secreto ;)
+                    heroe.setVidaAct(100);
+                    break;
+                    
                 default:
                     cout << "Opción errónea, vuelva a introducir una" << endl;
                     break;
-
             }
         }
         
         if (!terminar) {
-            
             ataqueMalo(heroe, malo);
-
             cout << malo.getNombre() << " ha atacado a " << heroe.getNombre();
         }
         
-        mana = true;
-        
-        
+        mana = true;       
     }
-    
 }
 
+/**
+ * @brief Función que determina si el combate ha finalizado o no
+ * @param heroe: PersonajeVideojuego que está en combate
+ * @param malo:Enemigo que está en combate
+ * @param terminar: Bool donde se almacenará el resultado
+ */
 void finCombate(PersonajeVideojuego& heroe, Enemigo& malo, bool& terminar) {
     
         if(malo.getVida() <= 0) {
 
             malo.SetVida(0);
             terminar = true;
+            cout <<heroe.getNombre()<<" ha vencido!";
             
         }else if (heroe.GetVidaAct() <= 0) {
             
             heroe.setVidaAct(0);
             terminar = true;
+            cout <<malo.getNombre() <<" ha vencido!";
             
         }
     
 }
 
+/**
+ * @brief Función encargada del menu de movimiento de personaje
+ * @param heroe:PersonajeVideojuego con el que se interaccionará
+ */
 void movimientoPersonaje(PersonajeVideojuego& heroe) {
     ScreenClear();
     cout << "Actualmente se encuentra en la posicion x: " << heroe.GetPosX() << "  y: " << heroe.GetPosY() << endl;
