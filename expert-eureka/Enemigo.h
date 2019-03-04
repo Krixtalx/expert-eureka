@@ -11,10 +11,14 @@
  * Created on 27 de febrero de 2019, 21:23
  */
 
-#include <string>
+
+
+
 
 #ifndef ENEMIGO_H
 #define ENEMIGO_H
+
+#include <string>
 
 class Enemigo {
 public:
@@ -31,8 +35,6 @@ public:
     void SetVida(int vida);
     Enemigo& setNombre(std::string nombre);
     std::string getNombre() const;
-
-
 
 private:
 

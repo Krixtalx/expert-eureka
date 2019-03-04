@@ -31,14 +31,16 @@ void ScreenClear() {
 }
 
 bool  spawner(){
+    
     int aux=rand()%100;
+    
     if(aux<60)
         return true;
     return false;
 }
 
-void vidaEnemigo(Enemigo& malo){
-    cout <<endl<<"Vida enemigo: "<<malo.getVida();
+void vidaEnemigo(PersonajeVideojuego& malo){
+    cout <<endl<<"Vida enemigo: "<<malo.GetVidaAct();
 }
 
 void atribHeroe(PersonajeVideojuego& heroe){
@@ -46,15 +48,94 @@ void atribHeroe(PersonajeVideojuego& heroe){
     cout<<"        "<< "Mana de "<<heroe.getNombre()<<": "<<heroe.GetManaAct();
 }
 
-void combate(PersonajeVideojuego& heroe, Enemigo& malo){
+void combate(PersonajeVideojuego& heroe, PersonajeVideojuego& malo){
     ScreenClear();
-    cout <<malo.getNombre()<<" aparecio en combate";
-    vidaEnemigo(malo);
-    atribHeroe(heroe);
-    cout <<endl<<"1. Ataque básico";
-    cout <<endl<<"2. Habilidad 1";
-    cout <<endl<<"3. Habilidad 2";
-    cout <<endl<<"Que desea hacer?: ";
+    
+    int opcionMenu = 0;
+    bool terminar = false, mana = true;
+    
+    cout <<malo.getNombre()<<" apareció en combate";
+    
+    while (!terminar) {
+        
+        vidaEnemigo(malo);
+        atribHeroe(heroe);
+        cout <<endl<<"1. Ataque básico";
+        cout <<endl<<"2. Habilidad 1";
+        cout <<endl<<"3. Habilidad 2";
+        cout <<endl<<"Que desea hacer?: ";
+        cin >> opcionMenu;
+        
+        cout << "\n";
+        
+        if (heroe.GetManaAct() <= heroe.getConsumoHab1() && opcionMenu == 2) {
+            cout << "No tienes suficiente maná para usar esta habilidad" << endl;
+            mana = false;
+        
+        }else if (heroe.GetManaAct() <= heroe.getConsumoHab2() && opcionMenu == 3) {
+            cout << "No tienes suficiente maná para usar esta habilidad" << endl;
+            mana = false;
+            
+        }
+        
+        if (mana) {
+            
+            switch (opcionMenu) {
+
+                case 1:
+                    heroe.ataqueBasico(malo);
+                    finCombate(heroe, malo, terminar);
+                    cout << malo.getNombre() << " ha recibido un ataque básico, vida restante: " << malo.GetVidaAct() << endl;
+                    break;
+
+                case 2:
+                    heroe.hab1(malo);
+                    finCombate(heroe, malo, terminar);
+                    cout << malo.getNombre() << " ha recibido daño de habilidad 1, vida restante: " << malo.GetVidaAct() << endl;
+                    break;
+
+                case 3:
+                    heroe.hab2(malo);
+                    finCombate(heroe, malo, terminar);
+                    cout << malo.getNombre() << " ha recibido daño de habilidad 2, vida restante: " << malo.GetVidaAct() << endl;
+                    break;
+                case 2209: //Shhhh... Esto es secreto :)
+                    heroe.incrementarMana(50);
+                default:
+                    cout << "Opción errónea, vuelva a introducir una" << endl;
+                    break;
+
+            }
+        }
+        
+        if (!terminar) {
+            
+            malo.ataqueBasico(heroe);
+
+            cout << malo.getNombre() << " ha atacado a " << heroe.getNombre();
+        }
+        
+        mana = true;
+        
+        
+    }
+    
+}
+
+void finCombate(PersonajeVideojuego& heroe, PersonajeVideojuego& malo, bool& terminar) {
+    
+        if(malo.GetVidaAct() <= 0) {
+
+            malo.setVidaAct(0);
+            terminar = true;
+            
+        }else if (heroe.GetVidaAct() <= 0) {
+            
+            heroe.setVidaAct(0);
+            terminar = true;
+            
+        }
+    
 }
 
 void movimientoPersonaje(PersonajeVideojuego& heroe) {

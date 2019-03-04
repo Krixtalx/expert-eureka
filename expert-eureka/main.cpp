@@ -24,62 +24,68 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
-    
+
     string nombre;
     Arma armaPorDefecto;
-    Arma bastonMagico("Baston Magico",12);
-    Arma EspadaLegendaria("Excalibur",25);
-    Enemigo Limo("Limo", 70,0,6);
-    
-    cout <<"Introduzca el nombre del Héroe: ";
-    getline(cin>>ws, nombre);
-    
-    PersonajeVideojuego Heroe(nombre, 0, 0, 100,50,&armaPorDefecto);
-    
-    movimientoPersonaje(Heroe);
-    if (spawner()){
-        combate(Heroe, Limo);
-    }
-    
+    Arma bastonMagico("Baston Magico", 12);
+    Arma EspadaLegendaria("Excalibur", 25);
+    PersonajeVideojuego Limo("Limo", 0, 0, 70, 50, &armaPorDefecto);
 
-//    try {
-//
-//        Arma arma1;
-//        PersonajeVideojuego Goku("Goku", 1, 1, 100, 50, &arma1);
-//        PersonajeVideojuego* Trunks = new PersonajeVideojuego("Trunks", 1, 1, 100, 50, &arma1);
-//        PersonajeVideojuego Equipo[2] = {
-//            {"Vegeta", 1, 1, 100, 50, &arma1},
-//            {"Son Goten", 1, 1, 100, 50, &arma1}
-//        };
-//
-//        Enemigo Freezer("Freezer", 100, 50, 6);
-//
-//        cout << Goku.getNombre() << " está siendo ayudado por: " << Trunks->getNombre() << ", " << Equipo[0].getNombre() <<
-//                " y " << Equipo[1].getNombre() << endl;
-//
-//        cout << "El enemigo " << Freezer.getNombre() << " ha aparecido." << endl;
-//
-//        cout << Goku.getNombre() << " se dispone a atacar." << endl;
-//
-//        Goku.ataqueBasico(Freezer);
-//
-//        cout << Freezer.getNombre() << " ha recibido daño, vida restante: " << Freezer.getVida() << endl;
-//
-//        cout << Equipo[1].getNombre() << " se dispone a atacar." << endl;
-//
-//        Equipo[1].hab1(Freezer);
-//
-//        cout << Freezer.getNombre() << " ha sufrido un gran golpe, vida restante: " << Freezer.getVida() << endl;
-//
-//        cout << Trunks->getNombre() << " se ha retirado del combate para ir al futuro" << endl;
-//
-//        delete Trunks;
-//
-//    } catch (std::string& error) {
-//
-//        cerr << "Error: " + error;
-//
-//    }
+    cout << "Introduzca el nombre del Héroe: ";
+    getline(cin>>ws, nombre);
+
+    PersonajeVideojuego Heroe(nombre, 0, 0, 100, 50, &armaPorDefecto);
+
+    bool fight = false;
+
+    while (!fight) {
+
+        movimientoPersonaje(Heroe);
+        if (spawner()) {
+            fight = true;
+            combate(Heroe, Limo);
+        }
+    }
+
+
+    //    try {
+    //
+    //        Arma arma1;
+    //        PersonajeVideojuego Goku("Goku", 1, 1, 100, 50, &arma1);
+    //        PersonajeVideojuego* Trunks = new PersonajeVideojuego("Trunks", 1, 1, 100, 50, &arma1);
+    //        PersonajeVideojuego Equipo[2] = {
+    //            {"Vegeta", 1, 1, 100, 50, &arma1},
+    //            {"Son Goten", 1, 1, 100, 50, &arma1}
+    //        };
+    //
+    //        Enemigo Freezer("Freezer", 100, 50, 6);
+    //
+    //        cout << Goku.getNombre() << " está siendo ayudado por: " << Trunks->getNombre() << ", " << Equipo[0].getNombre() <<
+    //                " y " << Equipo[1].getNombre() << endl;
+    //
+    //        cout << "El enemigo " << Freezer.getNombre() << " ha aparecido." << endl;
+    //
+    //        cout << Goku.getNombre() << " se dispone a atacar." << endl;
+    //
+    //        Goku.ataqueBasico(Freezer);
+    //
+    //        cout << Freezer.getNombre() << " ha recibido daño, vida restante: " << Freezer.getVida() << endl;
+    //
+    //        cout << Equipo[1].getNombre() << " se dispone a atacar." << endl;
+    //
+    //        Equipo[1].hab1(Freezer);
+    //
+    //        cout << Freezer.getNombre() << " ha sufrido un gran golpe, vida restante: " << Freezer.getVida() << endl;
+    //
+    //        cout << Trunks->getNombre() << " se ha retirado del combate para ir al futuro" << endl;
+    //
+    //        delete Trunks;
+    //
+    //    } catch (std::string& error) {
+    //
+    //        cerr << "Error: " + error;
+    //
+    //    }
 
     //    Arma arma1;
     //    PersonajeVideojuego heroe(5,6,200,0, &arma1);

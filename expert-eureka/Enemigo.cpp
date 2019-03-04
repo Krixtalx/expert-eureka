@@ -12,7 +12,7 @@
  */
 
 #include "Enemigo.h"
-#include <string>
+#include "PersonajeVideojuego.h"
 
 Enemigo::Enemigo(std::string nombre, int vida, int mana, int damageBasico) :
  nombre(nombre), vida(vida), mana(mana), damageBasico(damageBasico) {
@@ -72,5 +72,6 @@ Enemigo& Enemigo::setNombre(std::string nombre) {
 std::string Enemigo::getNombre() const {
     return nombre;
 }
+
 
 

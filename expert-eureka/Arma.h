@@ -11,10 +11,11 @@
  * Created on 1 de marzo de 2019, 19:10
  */
 
-#include <string>
 
 #ifndef ARMA_H
 #define ARMA_H
+
+#include <string>
 
 class Arma {
 public:

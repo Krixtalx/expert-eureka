@@ -11,13 +11,15 @@
  * Created on 27 de febrero de 2019, 21:23
  */
 
+
+
 #ifndef PERSONAJEVIDEOJUEGO_H
 #define PERSONAJEVIDEOJUEGO_H
 
-#include "Arma.h"
-#include "Enemigo.h"
-
 #include <string>
+
+#include "Enemigo.h"
+#include "Arma.h"
 
 class PersonajeVideojuego {
 public:
@@ -27,14 +29,16 @@ public:
     virtual ~PersonajeVideojuego();
 
     void movimiento(int x, int y);
-    void ataqueBasico(Enemigo& golpeado);
-    void hab1(Enemigo& golpeado);
-    void hab2(Enemigo& golpeado);
+    void ataqueBasico(PersonajeVideojuego& golpeado);
+    void hab1(PersonajeVideojuego& golpeado);
+    void hab2(PersonajeVideojuego& golpeado);
     void equiparArma(Arma* arma);
     void incrementarVida(int cantidad);
     void incrementarMana(int cantidad);
 
 
+    int getConsumoHab2() const;
+    int getConsumoHab1() const;
     int GetManaMax() const;
     int GetManaAct() const;
     int GetVidaMax() const;
@@ -44,6 +48,7 @@ public:
     int GetDamage()const;
     PersonajeVideojuego& setNombre(std::string nombre);
     std::string getNombre() const;
+    void setVidaAct(int vidaAct);
 
 private:
 

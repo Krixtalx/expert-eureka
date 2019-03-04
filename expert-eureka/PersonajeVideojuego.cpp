@@ -14,7 +14,6 @@
 #include "PersonajeVideojuego.h"
 #include "Arma.h"
 #include "Enemigo.h"
-#include <string>
 
 /**
  * @Brief Constructor por defecto de la clase PersonajeVideojuego
@@ -65,20 +64,32 @@ std::string PersonajeVideojuego::getNombre() const {
     return nombre;
 }
 
-void PersonajeVideojuego::ataqueBasico(Enemigo& golpeado) {
-    golpeado.SetVida(golpeado.getVida() - this->GetDamage());
+void PersonajeVideojuego::setVidaAct(int vidaAct) {
+    this->vidaAct = vidaAct;
 }
 
-void PersonajeVideojuego::hab1(Enemigo& golpeado) {
+int PersonajeVideojuego::getConsumoHab2() const {
+    return consumoHab2;
+}
+
+int PersonajeVideojuego::getConsumoHab1() const {
+    return consumoHab1;
+}
+
+void PersonajeVideojuego::ataqueBasico(PersonajeVideojuego& golpeado) {
+    golpeado.setVidaAct(golpeado.GetVidaAct() - this->GetDamage());
+}
+
+void PersonajeVideojuego::hab1(PersonajeVideojuego& golpeado) {
     if (manaAct >= consumoHab1) {
-        golpeado.SetVida(golpeado.getVida() - this->GetDamage() * this->damageHab1);
+        golpeado.setVidaAct(golpeado.GetVidaAct() - this->GetDamage() * this->damageHab1);
         manaAct -= consumoHab1;
     }
 }
 
-void PersonajeVideojuego::hab2(Enemigo& golpeado) {
+void PersonajeVideojuego::hab2(PersonajeVideojuego& golpeado) {
     if (manaAct >= consumoHab2) {
-        golpeado.SetVida(golpeado.getVida() - this->GetDamage() * this->damageHab2);
+        golpeado.setVidaAct(golpeado.GetVidaAct() - this->GetDamage() * this->damageHab2);
         manaAct -= consumoHab2;
     }
 }
@@ -113,3 +124,13 @@ int PersonajeVideojuego::GetPosY() const {
 int PersonajeVideojuego::GetPosX() const {
     return posX;
 }
+
+void PersonajeVideojuego::incrementarMana(int cantidad) {
+    
+    if(manaAct + cantidad >= manaMax)
+        manaAct = manaMax;
+    else
+        manaAct = cantidad;
+            
+}
+
