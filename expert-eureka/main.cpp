@@ -29,7 +29,7 @@ int main(int argc, char** argv) {
     Arma armaPorDefecto;
     Arma bastonMagico("Baston Magico", 12);
     Arma EspadaLegendaria("Excalibur", 25);
-    PersonajeVideojuego Limo("Limo", 0, 0, 70, 50, &armaPorDefecto);
+    Enemigo Limo("Limo", 100,0,5);
 
     cout << "Introduzca el nombre del Héroe: ";
     getline(cin>>ws, nombre);

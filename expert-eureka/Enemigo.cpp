@@ -12,7 +12,7 @@
  */
 
 #include "Enemigo.h"
-#include "PersonajeVideojuego.h"
+
 
 Enemigo::Enemigo(std::string nombre, int vida, int mana, int damageBasico) :
  nombre(nombre), vida(vida), mana(mana), damageBasico(damageBasico) {
@@ -38,6 +38,7 @@ int Enemigo::getVida() const {
 int Enemigo::getDamage() const {
     return damageBasico;
 }
+
 
 /**
  * @brief Establece la posición del personaje. Se puede utilizar en cascada

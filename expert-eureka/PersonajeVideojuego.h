@@ -18,8 +18,8 @@
 
 #include <string>
 
-#include "Enemigo.h"
 #include "Arma.h"
+#include "Enemigo.h"
 
 class PersonajeVideojuego {
 public:
@@ -29,9 +29,9 @@ public:
     virtual ~PersonajeVideojuego();
 
     void movimiento(int x, int y);
-    void ataqueBasico(PersonajeVideojuego& golpeado);
-    void hab1(PersonajeVideojuego& golpeado);
-    void hab2(PersonajeVideojuego& golpeado);
+    void ataqueBasico(Enemigo& golpeado);
+    void hab1(Enemigo& golpeado);
+    void hab2(Enemigo& golpeado);
     void equiparArma(Arma* arma);
     void incrementarVida(int cantidad);
     void incrementarMana(int cantidad);

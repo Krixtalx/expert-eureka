@@ -76,20 +76,20 @@ int PersonajeVideojuego::getConsumoHab1() const {
     return consumoHab1;
 }
 
-void PersonajeVideojuego::ataqueBasico(PersonajeVideojuego& golpeado) {
-    golpeado.setVidaAct(golpeado.GetVidaAct() - this->GetDamage());
+void PersonajeVideojuego::ataqueBasico(Enemigo& golpeado) {
+    golpeado.SetVida(golpeado.getVida() - this->GetDamage());
 }
 
-void PersonajeVideojuego::hab1(PersonajeVideojuego& golpeado) {
+void PersonajeVideojuego::hab1(Enemigo& golpeado) {
     if (manaAct >= consumoHab1) {
-        golpeado.setVidaAct(golpeado.GetVidaAct() - this->GetDamage() * this->damageHab1);
+        golpeado.SetVida(golpeado.getVida() - this->GetDamage() * this->damageHab1);
         manaAct -= consumoHab1;
     }
 }
 
-void PersonajeVideojuego::hab2(PersonajeVideojuego& golpeado) {
+void PersonajeVideojuego::hab2(Enemigo& golpeado) {
     if (manaAct >= consumoHab2) {
-        golpeado.setVidaAct(golpeado.GetVidaAct() - this->GetDamage() * this->damageHab2);
+        golpeado.SetVida(golpeado.getVida() - this->GetDamage() * this->damageHab2);
         manaAct -= consumoHab2;
     }
 }
@@ -130,7 +130,6 @@ void PersonajeVideojuego::incrementarMana(int cantidad) {
     if(manaAct + cantidad >= manaMax)
         manaAct = manaMax;
     else
-        manaAct = cantidad;
-            
+        manaAct = cantidad; 
 }
 

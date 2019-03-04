@@ -15,6 +15,7 @@
 #include <cstdlib>
 #include <iostream>
 #include "PersonajeVideojuego.h"
+#include "Enemigo.h"
 
 using std::cout;
 using std::endl;
@@ -39,8 +40,12 @@ bool  spawner(){
     return false;
 }
 
-void vidaEnemigo(PersonajeVideojuego& malo){
-    cout <<endl<<"Vida enemigo: "<<malo.GetVidaAct();
+void ataqueMalo(PersonajeVideojuego& heroe, Enemigo& malo){
+    heroe.setVidaAct(heroe.GetVidaAct()-malo.getDamage());
+}
+
+void vidaEnemigo(Enemigo& malo){
+    cout <<endl<<"Vida enemigo: "<<malo.getVida();
 }
 
 void atribHeroe(PersonajeVideojuego& heroe){
@@ -48,7 +53,7 @@ void atribHeroe(PersonajeVideojuego& heroe){
     cout<<"        "<< "Mana de "<<heroe.getNombre()<<": "<<heroe.GetManaAct();
 }
 
-void combate(PersonajeVideojuego& heroe, PersonajeVideojuego& malo){
+void combate(PersonajeVideojuego& heroe, Enemigo& malo){
     ScreenClear();
     
     int opcionMenu = 0;
@@ -85,19 +90,22 @@ void combate(PersonajeVideojuego& heroe, PersonajeVideojuego& malo){
                 case 1:
                     heroe.ataqueBasico(malo);
                     finCombate(heroe, malo, terminar);
-                    cout << malo.getNombre() << " ha recibido un ataque básico, vida restante: " << malo.GetVidaAct() << endl;
+                    ScreenClear();
+                    cout << malo.getNombre() << " ha recibido un ataque básico, vida restante: " << malo.getVida() << endl;
                     break;
 
                 case 2:
                     heroe.hab1(malo);
                     finCombate(heroe, malo, terminar);
-                    cout << malo.getNombre() << " ha recibido daño de habilidad 1, vida restante: " << malo.GetVidaAct() << endl;
+                    ScreenClear();
+                    cout << malo.getNombre() << " ha recibido daño de habilidad 1, vida restante: " << malo.getVida() << endl;
                     break;
 
                 case 3:
                     heroe.hab2(malo);
                     finCombate(heroe, malo, terminar);
-                    cout << malo.getNombre() << " ha recibido daño de habilidad 2, vida restante: " << malo.GetVidaAct() << endl;
+                    ScreenClear();
+                    cout << malo.getNombre() << " ha recibido daño de habilidad 2, vida restante: " << malo.getVida() << endl;
                     break;
                 case 2209: //Shhhh... Esto es secreto :)
                     heroe.incrementarMana(50);
@@ -110,7 +118,7 @@ void combate(PersonajeVideojuego& heroe, PersonajeVideojuego& malo){
         
         if (!terminar) {
             
-            malo.ataqueBasico(heroe);
+            ataqueMalo(heroe, malo);
 
             cout << malo.getNombre() << " ha atacado a " << heroe.getNombre();
         }
@@ -122,11 +130,11 @@ void combate(PersonajeVideojuego& heroe, PersonajeVideojuego& malo){
     
 }
 
-void finCombate(PersonajeVideojuego& heroe, PersonajeVideojuego& malo, bool& terminar) {
+void finCombate(PersonajeVideojuego& heroe, Enemigo& malo, bool& terminar) {
     
-        if(malo.GetVidaAct() <= 0) {
+        if(malo.getVida() <= 0) {
 
-            malo.setVidaAct(0);
+            malo.SetVida(0);
             terminar = true;
             
         }else if (heroe.GetVidaAct() <= 0) {

@@ -18,7 +18,7 @@
 #ifndef ENEMIGO_H
 #define ENEMIGO_H
 
-#include <string>
+ #include <string>
 
 class Enemigo {
 public:
