@@ -35,7 +35,7 @@ bool  spawner(){
     
     int aux=rand()%100;
     
-    if(aux<60)
+    if(aux<35)
         return true;
     return false;
 }
