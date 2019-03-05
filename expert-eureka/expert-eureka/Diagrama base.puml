@@ -1,0 +1,53 @@
+@startuml
+
+class PersonajeVideojuego{
+
+    +PersonajeVideojuego()=default
+    +PersonajeVideojuego(int x, int y,int vida, int mana, int damageArma)
+    +int getposX()
+    +int getposY()
+    +void movimiento(int x, int y)
+    +int getVida()
+    +int getMana()
+    +void incrementarVida()
+    +void incrementarMana()
+    +void ataqueBasico(Enemigo golpeado)
+    +void hab1(Enemigo golpeado)
+    +void hab2(Enemigo golpeado)
+    +void equiparArma()
+    
+    -int posX=0
+    -int posY=0
+    -int vidaAct=100
+    -int vidaMax=100
+    -int manaAct=50
+    -int manaMax=50
+    -Arma armaEquipada
+    -float damageHab1=1,2
+    -int consumoHab1=10
+    -float damageHab2=1,5
+    -int consumoHab2=20
+}
+
+class Enemigo{
+    +Enemigo()=default
+    +Enemigo (int vida, int mana, int damageBasico)
+    +int getVida()
+    +int getMana()
+    +void setPosicion(int posX, int posY)
+
+    -int vida=40
+    -int mana=0
+    -int damageBasico=5
+    -int posX=1
+    -int posY=1
+}
+
+class Arma{
+    +string getNombre()
+    +int getDamage()
+    -string nombre
+    -int damage
+}
+
+@enduml
