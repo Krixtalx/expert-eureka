@@ -49,8 +49,8 @@ private:
     std::string nombre = "Izuku";
     int posX = 0;
     int posY = 0;
-    int vidaAct = 100;
-    int vidaMax = 100;
+    int vidaAct = 120;
+    int vidaMax = 120;
     int manaAct = 50;
     int manaMax = 50;
     Arma* armaEquipada;
@@ -58,6 +58,13 @@ private:
     int consumoHab1 = 10;
     float damageHab2 = 1.5;
     int consumoHab2 = 20;
+    
+    int nivel = 1;
+    int experiencia=0;
+    
+    int vitalidad=12;
+    int inteligencia=10;
+    int fuerza=12;
 };
 
 #endif /* PERSONAJEVIDEOJUEGO_H */

@@ -39,7 +39,7 @@ bool  spawner(){
     
     int aux=rand()%100;
     
-    if(aux<35)
+    if(aux<45)
         return true;
     return false;
 }
@@ -78,7 +78,7 @@ void atribHeroe(PersonajeVideojuego& heroe){
 void combate(PersonajeVideojuego& heroe, Enemigo malo, int& enemigosDerrotados){
     ScreenClear();
     
-    int opcionMenu = 0, probHuir = 0, probMinima = 6; //Cambiar la ult variable para cambiar la probabilidad de huir
+    int opcionMenu = 0, probHuir = 0, probMinima = 65; //Cambiar la ult variable para cambiar la probabilidad de huir
     bool terminar = false, mana = true, noAtacar = false;
     
     cout <<malo.getNombre()<<" apareció en combate";
@@ -135,8 +135,10 @@ void combate(PersonajeVideojuego& heroe, Enemigo malo, int& enemigosDerrotados){
                     
                 case 4:
                     srand(time(NULL));
-                    probHuir = rand() % 11;
-                    if (probHuir > probMinima) {
+                    probHuir = rand() % 100;
+                    ScreenClear();
+                                        
+                    if (probHuir >= probMinima) {
                         terminar = true;
                         cout << "Has logrado huir del combate" << endl;
                     }else {
@@ -155,6 +157,10 @@ void combate(PersonajeVideojuego& heroe, Enemigo malo, int& enemigosDerrotados){
                     ScreenClear();
                     heroe.setVidaAct(100);
                     noAtacar = true;
+                    break;
+                    
+                case 8086:
+                    terminar=true;
                     break;
                     
                 default:
@@ -197,7 +203,6 @@ void finCombate(PersonajeVideojuego& heroe, Enemigo& malo, bool& terminar, int& 
             cout <<malo.getNombre() <<" ha vencido!" << endl;
             
         }
-    
 }
 
 /**
@@ -210,15 +215,15 @@ void finCombate(PersonajeVideojuego& heroe, Enemigo& malo, bool& terminar, int& 
 void movimientoPersonaje(PersonajeVideojuego& heroe, int& enemigosDerrotados, Arma armas[], int tamArmas) {
     ScreenClear();
     
-    int probEncontrarArma = 0, probMinima = 8; //Editar la ult variable para cambiar la probabilidad (Rango entre 0 y 10);
+    int probEncontrarArma = 0, probMinima = 80; //Editar la ult variable para cambiar la probabilidad (Rango entre 0 y 10);
     
     cout << "Actualmente se encuentra en la posicion x: " << heroe.GetPosX() << "  y: " << heroe.GetPosY()
          << "       Enemigos derrotados: " << enemigosDerrotados << endl;
     cout << endl << "1. Hacia la derecha";
     cout << endl << "2. Hacia arriba";
-    if (heroe.GetPosX() != 0)
+    if (heroe.GetPosX() > 0)
         cout << endl << "3. Hacia la izquierda";
-    if (heroe.GetPosY() != 0)
+    if (heroe.GetPosY() > 0)
         cout << endl << "4. Hacia abajo";
     cout <<endl<< "Hacia donde desea moverse?: ";
     int aux;
@@ -229,42 +234,45 @@ void movimientoPersonaje(PersonajeVideojuego& heroe, int& enemigosDerrotados, Ar
         switch (aux) {
             case 1:
                 inicializarSemillaRandom();
-                probEncontrarArma = rand() & 11;
+                probEncontrarArma = rand() % 100;
                 if(probEncontrarArma > probMinima)
                     armaEncontrada(heroe, armas, tamArmas);
                 heroe.movimiento(1, 0);
                 opcionincorrecta = false;
                 break;
+                
             case 2:
                 inicializarSemillaRandom();
-                probEncontrarArma = rand() & 11;
+                probEncontrarArma = rand() % 100;
                 if(probEncontrarArma > probMinima)
                     armaEncontrada(heroe, armas, tamArmas);
                 heroe.movimiento(0, 1);
                 opcionincorrecta = false;
                 break;
+                
             case 3:
                 inicializarSemillaRandom();
-                probEncontrarArma = rand() & 11;
+                probEncontrarArma = rand() % 100;
                 if(probEncontrarArma > probMinima)
                     armaEncontrada(heroe, armas, tamArmas);
                 heroe.movimiento(-1, 0);
                 opcionincorrecta = false;
                 break;
+                
             case 4:
                 inicializarSemillaRandom();
-                probEncontrarArma = rand() & 11;
+                probEncontrarArma = rand() % 100;
                 if(probEncontrarArma > probMinima)
                     armaEncontrada(heroe, armas, tamArmas);
                 heroe.movimiento(0, -1);
                 opcionincorrecta = false;
                 break;
+                
             default:
                 cout<<"Introduzca una opcion correcta: ";
                 break;
         }
     }
-
 }
 
 /**
@@ -283,9 +291,13 @@ void armaEncontrada(PersonajeVideojuego& heroe, Arma armas[], int tamArmas) {
     
     cout << "Has encontrado el arma: " << armas[armaEncontrada].getNombre() << endl;
     cout << "Este arma tiene un daño de: " << armas[armaEncontrada].getDamage() << endl;
-    cout << "El arma ha sido equipada automáticamente" << endl;
     
-    heroe.equiparArma(&armas[armaEncontrada]);
+    if (armas[armaEncontrada].getDamage()<heroe.GetDamage()) {
+        cout<<"Tiene menos daño que el arma equipada actualmente, por lo que se desecha"<<endl;
+    }else{
+        cout << "El arma ha sido equipada automáticamente" << endl;
+        heroe.equiparArma(&armas[armaEncontrada]);
+    }
     
     cout << "Introduzca un caracter para continuar: ";
     cin >> salir;
@@ -301,7 +313,7 @@ int armaAleatoria(int tamArmas) {
     
     inicializarSemillaRandom();
     
-    return rand() & (tamArmas - 1);
+    return rand() % tamArmas;
     
 }
 
