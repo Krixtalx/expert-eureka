@@ -75,7 +75,7 @@ void combate(PersonajeVideojuego& heroe, Enemigo malo){
     ScreenClear();
     
     int opcionMenu = 0;
-    bool terminar = false, mana = true;
+    bool terminar = false, mana = true, noAtacar = false;
     
     cout <<malo.getNombre()<<" apareció en combate";
     
@@ -92,10 +92,12 @@ void combate(PersonajeVideojuego& heroe, Enemigo malo){
         cout << "\n";
         
         if (heroe.GetManaAct() <= heroe.getConsumoHab1() && opcionMenu == 2) {
+            ScreenClear();
             cout << "No tienes suficiente maná para usar esta habilidad" << endl;
             mana = false;
         
         }else if (heroe.GetManaAct() <= heroe.getConsumoHab2() && opcionMenu == 3) {
+            ScreenClear();
             cout << "No tienes suficiente maná para usar esta habilidad" << endl;
             mana = false;
             
@@ -127,11 +129,15 @@ void combate(PersonajeVideojuego& heroe, Enemigo malo){
                     break;
                     
                 case 8085: //Shhhh... Esto es secreto :)
+                    ScreenClear();
                     heroe.incrementarMana(50);
+                    noAtacar = true;
                     break;
                     
                 case 69: //Shhhh... Esto es secreto ;)
+                    ScreenClear();
                     heroe.setVidaAct(100);
+                    noAtacar = true;
                     break;
                     
                 default:
@@ -140,11 +146,13 @@ void combate(PersonajeVideojuego& heroe, Enemigo malo){
             }
         }
         
-        if (!terminar) {
+        if (!terminar && !noAtacar) {
             ataqueMalo(heroe, malo);
-            cout << malo.getNombre() << " ha atacado a " << heroe.getNombre();
+            cout << malo.getNombre() << " ha atacado a " << heroe.getNombre() << endl;
+            finCombate(heroe, malo, terminar);
         }
         
+        noAtacar = false;
         mana = true;       
     }
 }
@@ -161,13 +169,13 @@ void finCombate(PersonajeVideojuego& heroe, Enemigo& malo, bool& terminar) {
 
             malo.SetVida(0);
             terminar = true;
-            cout <<heroe.getNombre()<<" ha vencido!";
+            cout <<heroe.getNombre()<<" ha vencido!" << endl;
             
         }else if (heroe.GetVidaAct() <= 0) {
             
             heroe.setVidaAct(0);
             terminar = true;
-            cout <<malo.getNombre() <<" ha vencido!";
+            cout <<malo.getNombre() <<" ha vencido!" << endl;
             
         }
     
@@ -177,9 +185,10 @@ void finCombate(PersonajeVideojuego& heroe, Enemigo& malo, bool& terminar) {
  * @brief Función encargada del menu de movimiento de personaje
  * @param heroe:PersonajeVideojuego con el que se interaccionará
  */
-void movimientoPersonaje(PersonajeVideojuego& heroe) {
+void movimientoPersonaje(PersonajeVideojuego& heroe, int enemigosDerrotados) {
     ScreenClear();
-    cout << "Actualmente se encuentra en la posicion x: " << heroe.GetPosX() << "  y: " << heroe.GetPosY() << endl;
+    cout << "Actualmente se encuentra en la posicion x: " << heroe.GetPosX() << "  y: " << heroe.GetPosY()
+         << "       Enemigos derrotados: " << enemigosDerrotados << endl;
     cout << endl << "1. Hacia la derecha";
     cout << endl << "2. Hacia arriba";
     if (heroe.GetPosX() != 0)
