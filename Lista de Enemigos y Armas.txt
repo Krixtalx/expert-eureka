@@ -1,0 +1,24 @@
+
+------------------------ARMAS------------------------
+
+const int TAMARMAS = 5;
+
+Arma armas[TAMARMAS] = { {"Espada de madera", 6}, {"Espada de metal", 7}, {"Bastón de caramelo", 3}, {"Absorbe espíritus", 8}, {"Varita de Sauco", 8}  };
+
+
+------------------------ENEMIGOS------------------------
+
+const int TAMENEMIGOS = 5;
+
+Enemigo(std::string nombre, int vida, int mana, int damageBasico);
+
+Enemigo enemigos[TAMENEMIGOS] = { {"Limo", 100, 0, 4}, {"Minotauro", 150, 0, 2}, {"Espíritu de fuego", 100, 50, 5}, {"Espíritu de hielo", 100, 50, 5}, {"Grifo", 100, 0, 5}  };
+
+
+------------------------JEFES------------------------
+
+const int TAMBOSSES = 1;
+
+PersonajeVideojuego(std::string nombre, int x, int y, int vida, int mana, Arma* Arma);
+
+PersonajeVideojuego bosses[TAMBOSSES] = { {"Santamaría", 0, 0, 300, 150, Ochentaochentaycinco} };
