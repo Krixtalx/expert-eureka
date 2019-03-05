@@ -8,13 +8,15 @@ class PersonajeVideojuego{
     +int getposY()
     +void movimiento(int x, int y)
     +int getVida()
+    +void setVida()
     +int getMana()
+    +void setMana()
     +void incrementarVida()
     +void incrementarMana()
     +void ataqueBasico(Enemigo golpeado)
     +void hab1(Enemigo golpeado)
     +void hab2(Enemigo golpeado)
-    +void equiparArma()
+    +void equiparArma(Arma* armaequipada)
     
     -int posX=0
     -int posY=0
@@ -22,6 +24,9 @@ class PersonajeVideojuego{
     -int vidaMax=100
     -int manaAct=50
     -int manaMax=50
+    -int vitalidad=12
+    -int inteligencia=10
+    -int fuerza=12
     -Arma armaEquipada
     -float damageHab1=1,2
     -int consumoHab1=10
@@ -31,16 +36,15 @@ class PersonajeVideojuego{
 
 class Enemigo{
     +Enemigo()=default
-    +Enemigo (int vida, int mana, int damageBasico)
+    +Enemigo (int vida, int damageBasico)
     +int getVida()
-    +int getMana()
-    +void setPosicion(int posX, int posY)
+    +int getDamage()
+    +Enemigo& setNombre()
+    +string getNombre()
 
+    -string Nombre
     -int vida=40
-    -int mana=0
     -int damageBasico=5
-    -int posX=1
-    -int posY=1
 }
 
 class Arma{

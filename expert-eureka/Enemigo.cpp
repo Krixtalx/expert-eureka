@@ -27,8 +27,6 @@ Enemigo::Enemigo(const Enemigo& orig) {
     this->nombre=orig.nombre;
     this->vida=orig.vida;
     this->damageBasico=orig.damageBasico;
-    this->posX=orig.posX;
-    this->posY=orig.posY;
 
 }
 
@@ -49,19 +47,6 @@ int Enemigo::getVida() const {
  */
 int Enemigo::getDamage() const {
     return damageBasico;
-}
-
-
-/**
- * @brief Establece la posición del personaje. Se puede utilizar en cascada
- * @param[in] posX
- * @param[in] posY
- */
-Enemigo& Enemigo::setPosicion(int posX, int posY) {
-    this->posX = posX;
-    this->posY = posY;
-
-    return *this;
 }
 
 /**

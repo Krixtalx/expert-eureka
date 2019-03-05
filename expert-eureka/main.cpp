@@ -27,8 +27,8 @@ int main(int argc, char** argv) {
     string nombre;
     Arma armaPorDefecto;
 
-    Arma armas[TAMARMAS] = { {"Espada de madera", 6}, {"Espada de metal", 7}, 
-    {"Bastón de caramelo", 3}, {"Absorbe espíritus", 8}, {"Varita de Sauco", 8} };
+    Arma armas[TAMARMAS] = { {"Espada de madera", 8}, {"Espada de metal", 10}, 
+    {"Bastón de caramelo", 6}, {"Absorbe espíritus", 11}, {"Varita de Sauco", 13} };
     
 //    Arma bastonMagico("Baston Magico", 12);
 //    Arma EspadaLegendaria("Excalibur", 25);
@@ -37,7 +37,7 @@ int main(int argc, char** argv) {
     cout << "Introduzca el nombre del Héroe: ";
     getline(cin>>ws, nombre);
 
-    PersonajeVideojuego Heroe(nombre, 0, 0, 100, 50, &armas[0]);
+    PersonajeVideojuego Heroe(nombre, 0, 0, 120, 50, &armas[0]);
 
     bool fight = false;
 

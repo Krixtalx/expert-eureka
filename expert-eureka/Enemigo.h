@@ -24,7 +24,6 @@ public:
     int getVida() const;
     int getDamage() const;
 
-    Enemigo& setPosicion(int posX, int posY);
     Enemigo& SetVida(int vida);
     Enemigo& setNombre(std::string nombre);
     std::string getNombre() const;
@@ -34,8 +33,6 @@ private:
     std::string nombre = "Jiren";
     int vida = 40;
     int damageBasico = 5;
-    int posX = 1;
-    int posY = 1;
 
 };
 
