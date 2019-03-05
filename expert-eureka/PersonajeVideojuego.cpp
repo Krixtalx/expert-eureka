@@ -194,3 +194,10 @@ void PersonajeVideojuego::incrementarMana(int cantidad) {
         manaAct = cantidad; 
 }
 
+void PersonajeVideojuego::equiparArma(Arma* arma) {
+    
+    armaEquipada = arma;
+    
+}
+
+

@@ -14,8 +14,8 @@
  * @param mana
  * @param damageBasico
  */
-Enemigo::Enemigo(std::string nombre, int vida, int mana, int damageBasico) :
- nombre(nombre), vida(vida), mana(mana), damageBasico(damageBasico) {
+Enemigo::Enemigo(std::string nombre, int vida, int damageBasico) :
+ nombre(nombre), vida(vida), damageBasico(damageBasico) {
 }
 
 /**
@@ -26,7 +26,6 @@ Enemigo::Enemigo(const Enemigo& orig) {
 
     this->nombre=orig.nombre;
     this->vida=orig.vida;
-    this->mana=orig.mana;
     this->damageBasico=orig.damageBasico;
     this->posX=orig.posX;
     this->posY=orig.posY;
@@ -34,14 +33,6 @@ Enemigo::Enemigo(const Enemigo& orig) {
 }
 
 Enemigo::~Enemigo() {
-}
-
-/**
- * @brief Getter del atributo Mana
- * @return  mana
- */
-int Enemigo::getMana() const {
-    return mana;
 }
 
 /**
@@ -77,8 +68,12 @@ Enemigo& Enemigo::setPosicion(int posX, int posY) {
  * @brief Setter del atributo vida
  * @param vida: Nuevo valor del atributo vida
  */
-void Enemigo::SetVida(int vida) {
+Enemigo& Enemigo::SetVida(int vida) {
+    
     this->vida = vida;
+    
+    return *this;
+    
 }
 
 

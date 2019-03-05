@@ -8,12 +8,14 @@
 #include "FuncionesAuxiliares.h"
 #include <cstdlib>
 #include <iostream>
+#include <time.h>
 #include "PersonajeVideojuego.h"
 #include "Enemigo.h"
 
 using std::cout;
 using std::endl;
 using std::cin;
+
 /**
  * @brief Función encargada de limpiar la consola
  */
@@ -33,6 +35,8 @@ void ScreenClear() {
  */
 bool  spawner(){
     
+    inicializarSemillaRandom();
+    
     int aux=rand()%100;
     
     if(aux<35)
@@ -46,7 +50,7 @@ bool  spawner(){
  * @param malo: Enemigo que hará el daño
  */
 void ataqueMalo(PersonajeVideojuego& heroe, Enemigo& malo){
-    heroe.setVidaAct(heroe.GetVidaAct()-malo.getDamage());
+    heroe.setVidaAct(heroe.GetVidaAct() - malo.getDamage());
 }
 
 /**
@@ -71,10 +75,10 @@ void atribHeroe(PersonajeVideojuego& heroe){
  * @param heroe: PersonajeVideojuego con el que se interaccionará
  * @param malo: Enemigo con el que se interaccionará
  */
-void combate(PersonajeVideojuego& heroe, Enemigo malo){
+void combate(PersonajeVideojuego& heroe, Enemigo malo, int& enemigosDerrotados){
     ScreenClear();
     
-    int opcionMenu = 0;
+    int opcionMenu = 0, probHuir = 0, probMinima = 6; //Cambiar la ult variable para cambiar la probabilidad de huir
     bool terminar = false, mana = true, noAtacar = false;
     
     cout <<malo.getNombre()<<" apareció en combate";
@@ -86,6 +90,7 @@ void combate(PersonajeVideojuego& heroe, Enemigo malo){
         cout <<endl<<"1. Ataque básico";
         cout <<endl<<"2. Habilidad 1";
         cout <<endl<<"3. Habilidad 2";
+        cout <<endl<<"4. Huir del combate";
         cout <<endl<<"Que desea hacer?: ";
         cin >> opcionMenu;
         
@@ -109,23 +114,35 @@ void combate(PersonajeVideojuego& heroe, Enemigo malo){
 
                 case 1:
                     heroe.ataqueBasico(malo);
-                    finCombate(heroe, malo, terminar);
+                    finCombate(heroe, malo, terminar, enemigosDerrotados);
                     ScreenClear();
                     cout << malo.getNombre() << " ha recibido un ataque básico, vida restante: " << malo.getVida() << endl;
                     break;
 
                 case 2:
                     heroe.hab1(malo);
-                    finCombate(heroe, malo, terminar);
+                    finCombate(heroe, malo, terminar, enemigosDerrotados);
                     ScreenClear();
                     cout << malo.getNombre() << " ha recibido daño de habilidad 1, vida restante: " << malo.getVida() << endl;
                     break;
 
                 case 3:
                     heroe.hab2(malo);
-                    finCombate(heroe, malo, terminar);
+                    finCombate(heroe, malo, terminar, enemigosDerrotados);
                     ScreenClear();
                     cout << malo.getNombre() << " ha recibido daño de habilidad 2, vida restante: " << malo.getVida() << endl;
+                    break;
+                    
+                case 4:
+                    srand(time(NULL));
+                    probHuir = rand() % 11;
+                    if (probHuir > probMinima) {
+                        terminar = true;
+                        cout << "Has logrado huir del combate" << endl;
+                    }else {
+                        cout << "Intento de huida fallido" << endl;
+                    }
+                    
                     break;
                     
                 case 8085: //Shhhh... Esto es secreto :)
@@ -149,7 +166,7 @@ void combate(PersonajeVideojuego& heroe, Enemigo malo){
         if (!terminar && !noAtacar) {
             ataqueMalo(heroe, malo);
             cout << malo.getNombre() << " ha atacado a " << heroe.getNombre() << endl;
-            finCombate(heroe, malo, terminar);
+            finCombate(heroe, malo, terminar, enemigosDerrotados);
         }
         
         noAtacar = false;
@@ -162,14 +179,16 @@ void combate(PersonajeVideojuego& heroe, Enemigo malo){
  * @param heroe: PersonajeVideojuego que está en combate
  * @param malo:Enemigo que está en combate
  * @param terminar: Bool donde se almacenará el resultado
+ * @param enemigosDerrotados: int que se sumará 1 si el enemigo ha sido derrotado
  */
-void finCombate(PersonajeVideojuego& heroe, Enemigo& malo, bool& terminar) {
+void finCombate(PersonajeVideojuego& heroe, Enemigo& malo, bool& terminar, int& enemigosDerrotados) {
     
         if(malo.getVida() <= 0) {
 
             malo.SetVida(0);
             terminar = true;
             cout <<heroe.getNombre()<<" ha vencido!" << endl;
+            enemigosDerrotados++;
             
         }else if (heroe.GetVidaAct() <= 0) {
             
@@ -184,9 +203,15 @@ void finCombate(PersonajeVideojuego& heroe, Enemigo& malo, bool& terminar) {
 /**
  * @brief Función encargada del menu de movimiento de personaje
  * @param heroe:PersonajeVideojuego con el que se interaccionará
+ * @param enemigosDerrotados, muestra la cantidad de enemigos derrotados
+ * @param armas[] Vector de armas
+ * @param tamArmas, Tamaño del vector armas
  */
-void movimientoPersonaje(PersonajeVideojuego& heroe, int enemigosDerrotados) {
+void movimientoPersonaje(PersonajeVideojuego& heroe, int& enemigosDerrotados, Arma armas[], int tamArmas) {
     ScreenClear();
+    
+    int probEncontrarArma = 0, probMinima = 8; //Editar la ult variable para cambiar la probabilidad (Rango entre 0 y 10);
+    
     cout << "Actualmente se encuentra en la posicion x: " << heroe.GetPosX() << "  y: " << heroe.GetPosY()
          << "       Enemigos derrotados: " << enemigosDerrotados << endl;
     cout << endl << "1. Hacia la derecha";
@@ -203,18 +228,34 @@ void movimientoPersonaje(PersonajeVideojuego& heroe, int enemigosDerrotados) {
         cin >>aux;
         switch (aux) {
             case 1:
+                inicializarSemillaRandom();
+                probEncontrarArma = rand() & 11;
+                if(probEncontrarArma > probMinima)
+                    armaEncontrada(heroe, armas, tamArmas);
                 heroe.movimiento(1, 0);
                 opcionincorrecta = false;
                 break;
             case 2:
+                inicializarSemillaRandom();
+                probEncontrarArma = rand() & 11;
+                if(probEncontrarArma > probMinima)
+                    armaEncontrada(heroe, armas, tamArmas);
                 heroe.movimiento(0, 1);
                 opcionincorrecta = false;
                 break;
             case 3:
+                inicializarSemillaRandom();
+                probEncontrarArma = rand() & 11;
+                if(probEncontrarArma > probMinima)
+                    armaEncontrada(heroe, armas, tamArmas);
                 heroe.movimiento(-1, 0);
                 opcionincorrecta = false;
                 break;
             case 4:
+                inicializarSemillaRandom();
+                probEncontrarArma = rand() & 11;
+                if(probEncontrarArma > probMinima)
+                    armaEncontrada(heroe, armas, tamArmas);
                 heroe.movimiento(0, -1);
                 opcionincorrecta = false;
                 break;
@@ -225,3 +266,48 @@ void movimientoPersonaje(PersonajeVideojuego& heroe, int enemigosDerrotados) {
     }
 
 }
+
+/**
+ * 
+ * @param[in] armas, Vector de armas
+ * @param[in] tamArmas, Tamaño del vector de armas
+ */
+void armaEncontrada(PersonajeVideojuego& heroe, Arma armas[], int tamArmas) {
+    
+    ScreenClear();
+    
+    char salir;
+    int armaEncontrada = 0;
+    
+    armaEncontrada = armaAleatoria(tamArmas);
+    
+    cout << "Has encontrado el arma: " << armas[armaEncontrada].getNombre() << endl;
+    cout << "Este arma tiene un daño de: " << armas[armaEncontrada].getDamage() << endl;
+    cout << "El arma ha sido equipada automáticamente" << endl;
+    
+    heroe.equiparArma(&armas[armaEncontrada]);
+    
+    cout << "Introduzca un caracter para continuar: ";
+    cin >> salir;
+    
+}
+
+/**
+ * 
+ * @param[in] tamArmas, Tamaño del vector de la clase Arma
+ * @return Devuelve la posición del arma elegida
+ */
+int armaAleatoria(int tamArmas) {
+    
+    inicializarSemillaRandom();
+    
+    return rand() & (tamArmas - 1);
+    
+}
+
+void inicializarSemillaRandom() {
+    
+    srand(time(NULL));
+    
+}
+

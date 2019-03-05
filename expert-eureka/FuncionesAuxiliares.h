@@ -18,8 +18,11 @@ bool spawner();
 void ataqueMalo(PersonajeVideojuego& heroe, Enemigo& malo);
 void vidaEnemigo(PersonajeVideojuego& malo);
 void atribHeroe(PersonajeVideojuego& heroe);
-void combate(PersonajeVideojuego& heroe, Enemigo malo);
-void movimientoPersonaje(PersonajeVideojuego& heroe, int enemigosDerrotados);
-void finCombate(PersonajeVideojuego& heroe, Enemigo& malo, bool& terminar);
+void combate(PersonajeVideojuego& heroe, Enemigo malo, int& enemigosDerrotados);
+int armaAleatoria(int tamArmas);
+void armaEncontrada(PersonajeVideojuego& heroe, /*const*/ Arma armas[], int tamArmas);
+void movimientoPersonaje(PersonajeVideojuego& heroe, int& enemigosDerrotados, /*const*/ Arma armas[], int tamArmas);
+void finCombate(PersonajeVideojuego& heroe, Enemigo& malo, bool& terminar, int& enemigosDerrotados);
+void inicializarSemillaRandom();
 
 #endif /* FUNCIONESAUXILIARES_H */
