@@ -35,7 +35,7 @@ void ScreenClear() {
  */
 bool  spawner(){
     
-    inicializarSemillaRandom();
+    //inicializarSemillaRandom();
     
     int aux=rand()%100;
     
@@ -134,7 +134,7 @@ void combate(PersonajeVideojuego& heroe, Enemigo malo, int& enemigosDerrotados){
                     break;
                     
                 case 4:
-                    srand(time(NULL));
+                    //srand(time(NULL));
                     probHuir = rand() % 100;
                     ScreenClear();
                                         
@@ -233,7 +233,7 @@ void movimientoPersonaje(PersonajeVideojuego& heroe, int& enemigosDerrotados, Ar
         cin >>aux;
         switch (aux) {
             case 1:
-                inicializarSemillaRandom();
+                //inicializarSemillaRandom();
                 probEncontrarArma = rand() % 100;
                 if(probEncontrarArma > probMinima)
                     armaEncontrada(heroe, armas, tamArmas);
@@ -242,7 +242,7 @@ void movimientoPersonaje(PersonajeVideojuego& heroe, int& enemigosDerrotados, Ar
                 break;
                 
             case 2:
-                inicializarSemillaRandom();
+                //inicializarSemillaRandom();
                 probEncontrarArma = rand() % 100;
                 if(probEncontrarArma > probMinima)
                     armaEncontrada(heroe, armas, tamArmas);
@@ -251,7 +251,7 @@ void movimientoPersonaje(PersonajeVideojuego& heroe, int& enemigosDerrotados, Ar
                 break;
                 
             case 3:
-                inicializarSemillaRandom();
+                //inicializarSemillaRandom();
                 probEncontrarArma = rand() % 100;
                 if(probEncontrarArma > probMinima)
                     armaEncontrada(heroe, armas, tamArmas);
@@ -260,7 +260,7 @@ void movimientoPersonaje(PersonajeVideojuego& heroe, int& enemigosDerrotados, Ar
                 break;
                 
             case 4:
-                inicializarSemillaRandom();
+                //inicializarSemillaRandom();
                 probEncontrarArma = rand() % 100;
                 if(probEncontrarArma > probMinima)
                     armaEncontrada(heroe, armas, tamArmas);
@@ -311,15 +311,18 @@ void armaEncontrada(PersonajeVideojuego& heroe, Arma armas[], int tamArmas) {
  */
 int armaAleatoria(int tamArmas) {
     
-    inicializarSemillaRandom();
-    
     return rand() % tamArmas;
     
 }
 
-void inicializarSemillaRandom() {
+/**
+ * 
+ * @param[in] tamEnemigos, Tamaño del vector de la clase Enemigo
+ * @return Devuelve la posición del enemigo elegido
+ */
+int enemigoAleatorio(int tamEnemigos) {
     
-    srand(time(NULL));
+    return rand() % tamEnemigos;
     
 }
 

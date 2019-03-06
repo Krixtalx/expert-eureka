@@ -16,6 +16,9 @@
  */
 Arma::Arma(std::string nombre, int damage) :
 nombre(nombre), damage(damage) {
+    
+    if (damage <= 0)
+        throw std::string ("Arma::Arma, variable damage <= 0");
 
 }
 
