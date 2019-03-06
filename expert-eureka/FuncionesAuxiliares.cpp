@@ -114,7 +114,7 @@ void combate(PersonajeVideojuego& heroe, Enemigo malo, int& enemigosDerrotados){
     int opcionMenu = 0, probHuir = 0, probMinima = 65; //Cambiar la ult variable para cambiar la probabilidad de huir
     bool terminar = false, mana = true, noAtacar = false;
     
-    cout <<malo.getNombre()<<" apareció en combate";
+    cout <<malo.getNombre()<<" apareció en combate"<<endl;
     while (!terminar) {
         
         vidaEnemigo(malo);
@@ -165,10 +165,12 @@ void combate(PersonajeVideojuego& heroe, Enemigo malo, int& enemigosDerrotados){
                     ScreenClear();
                     cout << malo.getNombre() << " ha recibido daño de habilidad 2, vida restante: " << malo.getVida() << endl;
                     break;
+                    
                 case 4:
                     ScreenClear();
                     heroe.tomarPocion(0);
                     break;
+                    
                 case 5:
                     //srand(time(NULL));
                     probHuir = rand() % 100;
