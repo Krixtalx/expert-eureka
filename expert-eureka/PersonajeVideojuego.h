@@ -14,11 +14,13 @@
 
 #include "Arma.h"
 #include "Enemigo.h"
+#include "Pocion.h"
 
 class PersonajeVideojuego {
 public:
     PersonajeVideojuego();
     PersonajeVideojuego(std::string nombre, int x, int y, int vida, int mana, Arma* Arma);
+    PersonajeVideojuego(std::string nombre, int x, int y, int vida, int mana, Arma* Arma, Pocion* pociones);
     PersonajeVideojuego(const PersonajeVideojuego& orig);
     virtual ~PersonajeVideojuego();
 
@@ -29,6 +31,7 @@ public:
     void equiparArma(Arma* arma);
     void incrementarVida(int cantidad);
     void incrementarMana(int cantidad);
+    void tomarPocion(int tipoPocion);
 
 
     int getConsumoHab2() const;
@@ -49,15 +52,18 @@ private:
     std::string nombre = "Izuku";
     int posX = 0;
     int posY = 0;
+    
     int vidaAct = 120;
     int vidaMax = 120;
     int manaAct = 50;
     int manaMax = 50;
+    
     Arma* armaEquipada;
     float damageHab1 = 1.3;
     int consumoHab1 = 8;
     float damageHab2 = 1.6;
     int consumoHab2 = 16;
+    Pocion* pociones;
     
     int nivel = 1;
     int experiencia=0;
@@ -68,4 +74,3 @@ private:
 };
 
 #endif /* PERSONAJEVIDEOJUEGO_H */
-

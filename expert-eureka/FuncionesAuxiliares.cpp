@@ -11,6 +11,7 @@
 #include <time.h>
 #include "PersonajeVideojuego.h"
 #include "Enemigo.h"
+#include "Pocion.h"
 
 using std::cout;
 using std::endl;
@@ -29,6 +30,11 @@ void ScreenClear() {
     }
 }
 
+
+
+//--------------------Aleatoriedad--------------------------------------------------------
+
+
 /**
  * @brief Funcion encargada de decidir aleatoriamente si se genera un enemigo o no.
  * @return True si se genera, false si no
@@ -43,6 +49,33 @@ bool  spawner(){
         return true;
     return false;
 }
+
+/**
+ * 
+ * @param[in] tamArmas, Tamaño del vector de la clase Arma
+ * @return Devuelve la posición del arma elegida
+ */
+int armaAleatoria(int tamArmas) {
+    
+    return rand() % tamArmas;
+    
+}
+
+/**
+ * 
+ * @param[in] tamEnemigos, Tamaño del vector de la clase Enemigo
+ * @return Devuelve la posición del enemigo elegido
+ */
+int enemigoAleatorio(int tamEnemigos) {
+    
+    return rand() % tamEnemigos;
+    
+}
+
+
+
+//-------------------------------COMBATE-------------------------------------------------------------------------
+
 
 /**
  * @brief Funcion encargada del daño del Enemigo al PersonajeVideojuego
@@ -82,7 +115,6 @@ void combate(PersonajeVideojuego& heroe, Enemigo malo, int& enemigosDerrotados){
     bool terminar = false, mana = true, noAtacar = false;
     
     cout <<malo.getNombre()<<" apareció en combate";
-    
     while (!terminar) {
         
         vidaEnemigo(malo);
@@ -90,7 +122,8 @@ void combate(PersonajeVideojuego& heroe, Enemigo malo, int& enemigosDerrotados){
         cout <<endl<<"1. Ataque básico";
         cout <<endl<<"2. Habilidad 1";
         cout <<endl<<"3. Habilidad 2";
-        cout <<endl<<"4. Huir del combate";
+        cout<<endl<<"4. Tomar pocion";
+        cout <<endl<<"5. Huir del combate";
         cout <<endl<<"Que desea hacer?: ";
         cin >> opcionMenu;
         
@@ -132,8 +165,11 @@ void combate(PersonajeVideojuego& heroe, Enemigo malo, int& enemigosDerrotados){
                     ScreenClear();
                     cout << malo.getNombre() << " ha recibido daño de habilidad 2, vida restante: " << malo.getVida() << endl;
                     break;
-                    
                 case 4:
+                    ScreenClear();
+                    heroe.tomarPocion(0);
+                    break;
+                case 5:
                     //srand(time(NULL));
                     probHuir = rand() % 100;
                     ScreenClear();
@@ -204,6 +240,12 @@ void finCombate(PersonajeVideojuego& heroe, Enemigo& malo, bool& terminar, int& 
             
         }
 }
+
+
+
+
+//------------------------Movimiento------------------------------------------
+
 
 /**
  * @brief Función encargada del menu de movimiento de personaje
@@ -303,26 +345,3 @@ void armaEncontrada(PersonajeVideojuego& heroe, Arma armas[], int tamArmas) {
     cin >> salir;
     
 }
-
-/**
- * 
- * @param[in] tamArmas, Tamaño del vector de la clase Arma
- * @return Devuelve la posición del arma elegida
- */
-int armaAleatoria(int tamArmas) {
-    
-    return rand() % tamArmas;
-    
-}
-
-/**
- * 
- * @param[in] tamEnemigos, Tamaño del vector de la clase Enemigo
- * @return Devuelve la posición del enemigo elegido
- */
-int enemigoAleatorio(int tamEnemigos) {
-    
-    return rand() % tamEnemigos;
-    
-}
-

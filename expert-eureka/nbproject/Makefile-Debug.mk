@@ -39,6 +39,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Enemigo.o \
 	${OBJECTDIR}/FuncionesAuxiliares.o \
 	${OBJECTDIR}/PersonajeVideojuego.o \
+	${OBJECTDIR}/Pocion.o \
 	${OBJECTDIR}/main.o
 
 
@@ -85,6 +86,11 @@ ${OBJECTDIR}/PersonajeVideojuego.o: PersonajeVideojuego.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/PersonajeVideojuego.o PersonajeVideojuego.cpp
+
+${OBJECTDIR}/Pocion.o: Pocion.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Pocion.o Pocion.cpp
 
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
