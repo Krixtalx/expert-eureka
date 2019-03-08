@@ -24,6 +24,9 @@ int main(int argc, char** argv) {
     const int TAMENEMIGOS = 5;
     const int TAMARMAS = 5;
     const int TAMPOCIONES=1;
+    
+    const int hola=0;
+    
     int enemigosDerrotados = 0, indiceEnemigoAleatorio = 0;
     
     string nombre;
