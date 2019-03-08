@@ -71,6 +71,8 @@ int main(int argc, char** argv) {
         cout << "El juego ha terminado! :D" << endl;
 
         cin>>ws;
+        
+        cout << "VIVA WILLYREX";
     
     }catch (string& error) {
         
