@@ -20,7 +20,7 @@ class PersonajeVideojuego {
 public:
     PersonajeVideojuego();
     PersonajeVideojuego(std::string nombre, int x, int y, int vida, int mana, Arma* Arma);
-    PersonajeVideojuego(std::string nombre, int x, int y, int vida, int mana, Arma* Arma, Pocion* pociones);
+    PersonajeVideojuego(std::string nombre, int x, int y, int vida, int mana, Arma* Arma, Pocion pociones[]);
     PersonajeVideojuego(const PersonajeVideojuego& orig);
     virtual ~PersonajeVideojuego();
 

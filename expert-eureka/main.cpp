@@ -25,7 +25,6 @@ int main(int argc, char** argv) {
     const int TAMARMAS = 5;
     const int TAMPOCIONES=1;
     
-    const int hola=0;
     
     int enemigosDerrotados = 0, indiceEnemigoAleatorio = 0;
     
@@ -51,7 +50,7 @@ int main(int argc, char** argv) {
         
         //---------POCIONES--------
         
-        Pocion pociones[1]={{"Pocion de vida",50,0,2}};
+        Pocion pociones[2]={{"Pocion de vida",50,0,2},{"Pocion de Mana",0,50,2}};
         
         Enemigo Limo("Limo", 100, 4);
 

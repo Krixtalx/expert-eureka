@@ -42,7 +42,7 @@ nombre(nombre), posX(x), posY(y), vidaMax(vida), vidaAct(vida), manaMax(mana), m
  * @param Arma: Puntero a un objeto de la clase Arma (Arma.h) 
  * @param pociones: Puntero a un objeto de la clase Pocion (Pocion.h)
  */
-PersonajeVideojuego::PersonajeVideojuego(std::string nombre, int x, int y, int vida, int mana, Arma* Arma, Pocion* pociones):
+PersonajeVideojuego::PersonajeVideojuego(std::string nombre, int x, int y, int vida, int mana, Arma* Arma, Pocion pociones[]):
 nombre(nombre), posX(x), posY(y), vidaMax(vida), vidaAct(vida), manaMax(mana), manaAct(mana), armaEquipada(Arma),pociones(pociones){
     if (nombre.length() == 0)
         throw std::string("PersonajeVideojuego::PersonajeVideojuego, el nombre establecido es cadena vacía");    
@@ -221,10 +221,10 @@ void PersonajeVideojuego::incrementarVida(int cantidad) {
 }
 
 void PersonajeVideojuego::tomarPocion(int tipoPocion) {
-    if (pociones->GetNpociones()>0) {
-        vidaAct+=pociones->GetVida();
-        manaAct+=pociones->GetMana();
-        pociones->SetNpociones(pociones->GetNpociones()-1);
+    if (pociones[tipoPocion].GetNpociones()>0) {
+        vidaAct+=pociones[tipoPocion].GetVida();
+        manaAct+=pociones[tipoPocion].GetMana();
+        pociones[tipoPocion].SetNpociones(pociones[tipoPocion].GetNpociones()-1);
     }
 }
 
