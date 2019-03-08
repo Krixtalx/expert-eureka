@@ -90,15 +90,15 @@ void ataqueMalo(PersonajeVideojuego& heroe, Enemigo& malo){
  * @brief Función encargada de mostrar la vida del enemigo
  * @param malo: Enemigo del que se mostrará la vida
  */
-void vidaEnemigo(Enemigo& malo){
-    cout <<endl<<"Vida enemigo: "<<malo.getVida();
+void mostrarVidaEnemigo(Enemigo& malo){
+    cout << endl << "Vida " << malo.getNombre() << ": " << malo.getVida();
 }
 
 /**
  * @brief Función encargada de mostrar la vida y maná actual del personaje
  * @param heroe:
  */
-void atribHeroe(PersonajeVideojuego& heroe){
+void mostrarAtribHeroe(PersonajeVideojuego& heroe){
     cout<<endl<< "Vida de "<<heroe.getNombre()<<": "<<heroe.GetVidaAct();
     cout<<"        "<< "Mana de "<<heroe.getNombre()<<": "<<heroe.GetManaAct();
 }
@@ -117,8 +117,9 @@ void combate(PersonajeVideojuego& heroe, Enemigo malo, int& enemigosDerrotados){
     cout <<malo.getNombre()<<" apareció en combate"<<endl;
     while (!terminar) {
         
-        vidaEnemigo(malo);
-        atribHeroe(heroe);
+        mostrarVidaEnemigo(malo);
+        mostrarAtribHeroe(heroe);
+        cout << "       Numero de pociones: " << heroe.getPocion()->GetNpociones();
         cout <<endl<<"1. Ataque básico";
         cout <<endl<<"2. Habilidad 1";
         cout <<endl<<"3. Habilidad 2";
@@ -149,21 +150,21 @@ void combate(PersonajeVideojuego& heroe, Enemigo malo, int& enemigosDerrotados){
                     heroe.ataqueBasico(malo);
                     finCombate(heroe, malo, terminar, enemigosDerrotados);
                     ScreenClear();
-                    cout << malo.getNombre() << " ha recibido un ataque básico, vida restante: " << malo.getVida() << endl;
+                    cout << malo.getNombre() << " ha recibido un ataque básico" << endl;
                     break;
 
                 case 2:
                     heroe.hab1(malo);
                     finCombate(heroe, malo, terminar, enemigosDerrotados);
                     ScreenClear();
-                    cout << malo.getNombre() << " ha recibido daño de habilidad 1, vida restante: " << malo.getVida() << endl;
+                    cout << malo.getNombre() << " ha recibido daño de habilidad 1" << endl;
                     break;
 
                 case 3:
                     heroe.hab2(malo);
                     finCombate(heroe, malo, terminar, enemigosDerrotados);
                     ScreenClear();
-                    cout << malo.getNombre() << " ha recibido daño de habilidad 2, vida restante: " << malo.getVida() << endl;
+                    cout << malo.getNombre() << " ha recibido daño de habilidad 2" << endl;
                     break;
                     
                 case 4:

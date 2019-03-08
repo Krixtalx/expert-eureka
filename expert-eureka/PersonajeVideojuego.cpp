@@ -221,10 +221,20 @@ void PersonajeVideojuego::incrementarVida(int cantidad) {
 }
 
 void PersonajeVideojuego::tomarPocion(int tipoPocion) {
+    
     if (pociones[tipoPocion].GetNpociones()>0) {
         vidaAct+=pociones[tipoPocion].GetVida();
         manaAct+=pociones[tipoPocion].GetMana();
         pociones[tipoPocion].SetNpociones(pociones[tipoPocion].GetNpociones()-1);
+        
+        if (this->vidaAct > this->vidaMax)
+            vidaAct = vidaMax;
+        
     }
 }
+
+Pocion* PersonajeVideojuego::getPocion() const {
+    return this->pociones;
+}
+
 

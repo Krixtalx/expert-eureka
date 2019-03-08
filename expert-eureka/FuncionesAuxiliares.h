@@ -16,8 +16,8 @@ void ScreenClear();
 bool spawner();
 
 void ataqueMalo(PersonajeVideojuego& heroe, Enemigo& malo);
-void vidaEnemigo(PersonajeVideojuego& malo);
-void atribHeroe(PersonajeVideojuego& heroe);
+void mostrarVidaEnemigo(PersonajeVideojuego& malo);
+void mostrarAtribHeroe(PersonajeVideojuego& heroe);
 void combate(PersonajeVideojuego& heroe, Enemigo malo, int& enemigosDerrotados);
 int armaAleatoria(int tamArmas);
 int enemigoAleatorio(int tamEnemigos);

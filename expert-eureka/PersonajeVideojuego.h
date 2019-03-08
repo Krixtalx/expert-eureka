@@ -43,6 +43,7 @@ public:
     int GetPosY() const;
     int GetPosX() const;
     int GetDamage()const;
+    Pocion* getPocion() const;
     PersonajeVideojuego& setNombre(std::string nombre);
     std::string getNombre() const;
     void setVidaAct(int vidaAct);
