@@ -1,0 +1,13 @@
+<map id="movimientoPersonaje" name="movimientoPersonaje">
+<area shape="rect" id="node1" title="Función encargada del menu de movimiento de personaje." alt="" coords="5,108,152,135"/>
+<area shape="rect" id="node2" href="$_funciones_auxiliares_8cpp.html#a2be8995ad7028f8b7f560c01cc9305d9" title="Función encargada de limpiar la consola." alt="" coords="417,11,511,37"/>
+<area shape="rect" id="node3" href="$class_personaje_videojuego.html#aba3de9d518998430c3aeb1d157ea6a13" title="Getter del atributo PosX." alt="" coords="200,35,344,77"/>
+<area shape="rect" id="node4" href="$class_personaje_videojuego.html#a9c56299a7c529c8aa40b6533b7bf7411" title="Getter del atributo PosY." alt="" coords="200,101,344,142"/>
+<area shape="rect" id="node5" href="$_funciones_auxiliares_8cpp.html#ac8d1e05609684ed957a022f9811f9f30" title=" " alt="" coords="213,191,331,217"/>
+<area shape="rect" id="node11" href="$class_personaje_videojuego.html#ae0eac077aba0344d497a280795e3db1b" title=" " alt="" coords="200,242,344,283"/>
+<area shape="rect" id="node6" href="$_funciones_auxiliares_8cpp.html#ad13c7c03e75f6210c3cebbf1026e3e8f" title=" " alt="" coords="413,89,515,116"/>
+<area shape="rect" id="node7" href="$class_arma.html#a9676bd126b3c87c2a0db36099dec9065" title="Getter del atributo nombre." alt="" coords="402,140,526,167"/>
+<area shape="rect" id="node8" href="$class_arma.html#a20f2d4f9615675c9c1833576202217cc" title="Getter del atributo damage." alt="" coords="584,220,711,247"/>
+<area shape="rect" id="node9" href="$class_personaje_videojuego.html#a56976a987af7a47375e061ddbc9c7814" title="Método que obtiene el daño del arma equipada." alt="" coords="392,242,536,283"/>
+<area shape="rect" id="node10" href="$class_personaje_videojuego.html#a4f91c8bdb19999ee5a02e180dfc4133e" title="Hace que el atributo Arma pase a ser la que se pasa por parametro." alt="" coords="392,307,536,349"/>
+</map>

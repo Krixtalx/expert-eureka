@@ -1,0 +1,9 @@
+<map id="armaEncontrada" name="armaEncontrada">
+<area shape="rect" id="node1" title=" " alt="" coords="5,132,123,159"/>
+<area shape="rect" id="node2" href="$_funciones_auxiliares_8cpp.html#a2be8995ad7028f8b7f560c01cc9305d9" title="Función encargada de limpiar la consola." alt="" coords="196,5,289,32"/>
+<area shape="rect" id="node3" href="$_funciones_auxiliares_8cpp.html#ad13c7c03e75f6210c3cebbf1026e3e8f" title=" " alt="" coords="191,56,294,83"/>
+<area shape="rect" id="node4" href="$class_arma.html#a9676bd126b3c87c2a0db36099dec9065" title="Getter del atributo nombre." alt="" coords="181,107,305,133"/>
+<area shape="rect" id="node5" href="$class_arma.html#a20f2d4f9615675c9c1833576202217cc" title="Getter del atributo damage." alt="" coords="363,187,489,213"/>
+<area shape="rect" id="node6" href="$class_personaje_videojuego.html#a56976a987af7a47375e061ddbc9c7814" title="Método que obtiene el daño del arma equipada." alt="" coords="171,209,315,250"/>
+<area shape="rect" id="node7" href="$class_personaje_videojuego.html#a4f91c8bdb19999ee5a02e180dfc4133e" title="Hace que el atributo Arma pase a ser la que se pasa por parametro." alt="" coords="171,274,315,315"/>
+</map>

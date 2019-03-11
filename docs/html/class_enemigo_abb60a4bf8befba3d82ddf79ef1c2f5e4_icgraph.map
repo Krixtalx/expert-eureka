@@ -1,0 +1,9 @@
+<map id="Enemigo::getVidaAct" name="Enemigo::getVidaAct">
+<area shape="rect" id="node1" title="Getter del atributo VidaAct." alt="" coords="317,115,463,141"/>
+<area shape="rect" id="node2" href="$_funciones_auxiliares_8cpp.html#a9bf893634399666fd6083e81907fda91" title="Función encargada de mostrar la vida del enemigo." alt="" coords="126,5,269,32"/>
+<area shape="rect" id="node4" href="$_funciones_auxiliares_8h.html#ab7132c9f4b7b2ca712193edc84a6f3d2" title="Función que determina si el combate ha finalizado o no." alt="" coords="153,56,241,83"/>
+<area shape="rect" id="node5" href="$class_personaje_videojuego.html#a7bb9426b984a05f28bc56fdb3b5e7f7e" title="Metodo encargado de quitarle vida al &quot;Enemigo&quot; golpeado en función al daño del arma." alt="" coords="125,107,269,149"/>
+<area shape="rect" id="node6" href="$class_personaje_videojuego.html#af7a6c100989892a52554ed398d698117" title="Metodo encargado de quitarle vida al &quot;Enemigo&quot; golpeado en función al daño del arma." alt="" coords="125,173,269,214"/>
+<area shape="rect" id="node7" href="$class_personaje_videojuego.html#a519137008dbce0fa14caa6043295a727" title="Metodo encargado de quitarle vida al &quot;Enemigo&quot; golpeado en función al daño del arma." alt="" coords="125,238,269,279"/>
+<area shape="rect" id="node3" href="$_funciones_auxiliares_8h.html#ae241fbb0dccd1897ded0a32efcb55824" title="Función encargada de iniciar el combate." alt="" coords="5,148,77,175"/>
+</map>

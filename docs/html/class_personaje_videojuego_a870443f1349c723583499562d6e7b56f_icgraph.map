@@ -1,0 +1,4 @@
+<map id="PersonajeVideojuego::incrementarMana" name="PersonajeVideojuego::incrementarMana">
+<area shape="rect" id="node1" title="Incrementa el mana actual según &quot;cantidad&quot;." alt="" coords="125,5,269,47"/>
+<area shape="rect" id="node2" href="$_funciones_auxiliares_8h.html#ae241fbb0dccd1897ded0a32efcb55824" title="Función encargada de iniciar el combate." alt="" coords="5,13,77,39"/>
+</map>

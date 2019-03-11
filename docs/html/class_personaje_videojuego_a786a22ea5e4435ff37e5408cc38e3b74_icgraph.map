@@ -1,0 +1,6 @@
+<map id="PersonajeVideojuego::setVidaAct" name="PersonajeVideojuego::setVidaAct">
+<area shape="rect" id="node1" title="Setter del atributo VidaAct." alt="" coords="143,49,287,90"/>
+<area shape="rect" id="node2" href="$_funciones_auxiliares_8h.html#a4cae0c5d19e7197fa86f5c68cb395464" title="Funcion encargada del daño del Enemigo al PersonajeVideojuego." alt="" coords="5,5,95,32"/>
+<area shape="rect" id="node3" href="$_funciones_auxiliares_8h.html#ae241fbb0dccd1897ded0a32efcb55824" title="Función encargada de iniciar el combate." alt="" coords="14,56,86,83"/>
+<area shape="rect" id="node4" href="$_funciones_auxiliares_8h.html#ab7132c9f4b7b2ca712193edc84a6f3d2" title="Función que determina si el combate ha finalizado o no." alt="" coords="6,107,94,133"/>
+</map>

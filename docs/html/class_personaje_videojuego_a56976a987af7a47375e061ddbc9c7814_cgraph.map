@@ -1,0 +1,4 @@
+<map id="PersonajeVideojuego::GetDamage" name="PersonajeVideojuego::GetDamage">
+<area shape="rect" id="node1" title="Método que obtiene el daño del arma equipada." alt="" coords="5,5,149,47"/>
+<area shape="rect" id="node2" href="$class_arma.html#a20f2d4f9615675c9c1833576202217cc" title="Getter del atributo damage." alt="" coords="197,13,324,39"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="PersonajeVideojuego::ataqueBasico" name="PersonajeVideojuego::ataqueBasico">
+<area shape="rect" id="node1" title="Metodo encargado de quitarle vida al &quot;Enemigo&quot; golpeado en función al daño del arma." alt="" coords="5,49,149,90"/>
+<area shape="rect" id="node2" href="$class_enemigo.html#a5d3b9fc52408542954b8fc216e639d2f" title="Setter del atributo vidaAct." alt="" coords="207,5,333,32"/>
+<area shape="rect" id="node3" href="$class_enemigo.html#abb60a4bf8befba3d82ddf79ef1c2f5e4" title="Getter del atributo VidaAct." alt="" coords="197,56,343,83"/>
+<area shape="rect" id="node4" href="$class_personaje_videojuego.html#a56976a987af7a47375e061ddbc9c7814" title="Método que obtiene el daño del arma equipada." alt="" coords="198,107,342,149"/>
+<area shape="rect" id="node5" href="$class_arma.html#a20f2d4f9615675c9c1833576202217cc" title="Getter del atributo damage." alt="" coords="391,115,517,141"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="PersonajeVideojuego::GetDamage" name="PersonajeVideojuego::GetDamage">
+<area shape="rect" id="node1" title="Método que obtiene el daño del arma equipada." alt="" coords="317,90,461,131"/>
+<area shape="rect" id="node2" href="$_funciones_auxiliares_8h.html#ac8d1e05609684ed957a022f9811f9f30" title=" " alt="" coords="139,5,256,32"/>
+<area shape="rect" id="node3" href="$class_personaje_videojuego.html#a7bb9426b984a05f28bc56fdb3b5e7f7e" title="Metodo encargado de quitarle vida al &quot;Enemigo&quot; golpeado en función al daño del arma." alt="" coords="125,57,269,98"/>
+<area shape="rect" id="node5" href="$class_personaje_videojuego.html#af7a6c100989892a52554ed398d698117" title="Metodo encargado de quitarle vida al &quot;Enemigo&quot; golpeado en función al daño del arma." alt="" coords="125,122,269,163"/>
+<area shape="rect" id="node6" href="$class_personaje_videojuego.html#a519137008dbce0fa14caa6043295a727" title="Metodo encargado de quitarle vida al &quot;Enemigo&quot; golpeado en función al daño del arma." alt="" coords="125,187,269,229"/>
+<area shape="rect" id="node4" href="$_funciones_auxiliares_8h.html#ae241fbb0dccd1897ded0a32efcb55824" title="Función encargada de iniciar el combate." alt="" coords="5,129,77,156"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="mostrarAtribHeroe" name="mostrarAtribHeroe">
+<area shape="rect" id="node1" title="Función encargada de mostrar la vida y maná actual del personaje." alt="" coords="5,143,132,170"/>
+<area shape="rect" id="node2" href="$class_personaje_videojuego.html#a75865ab7b4892b9297c732218fea9422" title="Getter del atributo nombre." alt="" coords="180,5,324,47"/>
+<area shape="rect" id="node3" href="$class_personaje_videojuego.html#a6bfa53560c746921773f5ec8bff99ff2" title="Getter del atributo VidaAct." alt="" coords="180,71,324,112"/>
+<area shape="rect" id="node4" href="$class_personaje_videojuego.html#ac62b2004ebb2efa93071f92a863c92f4" title="Getter del atributo VidaMax." alt="" coords="180,136,324,177"/>
+<area shape="rect" id="node5" href="$class_personaje_videojuego.html#aefd211301265b5b901b056b227f26c6a" title="Getter del atributo ManaAct." alt="" coords="180,201,324,243"/>
+<area shape="rect" id="node6" href="$class_personaje_videojuego.html#a58111800d2315c70bb8f3a2cdfac5f9d" title="Getter del atributo ManaMax." alt="" coords="180,267,324,308"/>
+</map>

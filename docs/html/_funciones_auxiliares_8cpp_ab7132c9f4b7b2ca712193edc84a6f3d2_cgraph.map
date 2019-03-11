@@ -1,0 +1,14 @@
+<map id="finCombate" name="finCombate">
+<area shape="rect" id="node1" title="Función que determina si el combate ha finalizado o no." alt="" coords="5,297,93,324"/>
+<area shape="rect" id="node2" href="$class_enemigo.html#abb60a4bf8befba3d82ddf79ef1c2f5e4" title="Getter del atributo VidaAct." alt="" coords="152,5,297,32"/>
+<area shape="rect" id="node3" href="$class_enemigo.html#a5d3b9fc52408542954b8fc216e639d2f" title="Setter del atributo vidaAct." alt="" coords="161,56,288,83"/>
+<area shape="rect" id="node4" href="$class_personaje_videojuego.html#a75865ab7b4892b9297c732218fea9422" title="Getter del atributo nombre." alt="" coords="153,107,297,149"/>
+<area shape="rect" id="node5" href="$class_enemigo.html#a50ca67547b39eaf8cfcc740537857fdf" title=" " alt="" coords="141,173,308,200"/>
+<area shape="rect" id="node6" href="$class_personaje_videojuego.html#a357ef7b280fbbca6d678e430da887ba8" title=" " alt="" coords="153,225,297,266"/>
+<area shape="rect" id="node7" href="$class_personaje_videojuego.html#ab22fbc6ab766244b3a561ca2b29bbe8d" title=" " alt="" coords="153,290,297,331"/>
+<area shape="rect" id="node8" href="$class_personaje_videojuego.html#a4ccb27588eb9a97bc91c0fd2b1f873d3" title="Método encarga de administrar la subida de nivel del personaje." alt="" coords="153,355,297,397"/>
+<area shape="rect" id="node9" href="$class_personaje_videojuego.html#a31433885b36a5df74e3a98bebf455166" title=" " alt="" coords="153,421,297,462"/>
+<area shape="rect" id="node10" href="$class_personaje_videojuego.html#a6bfa53560c746921773f5ec8bff99ff2" title="Getter del atributo VidaAct." alt="" coords="153,486,297,527"/>
+<area shape="rect" id="node11" href="$class_personaje_videojuego.html#a786a22ea5e4435ff37e5408cc38e3b74" title="Setter del atributo VidaAct." alt="" coords="153,551,297,593"/>
+<area shape="rect" id="node12" href="$class_enemigo.html#aef906c4b96985b9c92ebf9618d9dda6e" title="Getter del atributo Nombre." alt="" coords="153,617,297,644"/>
+</map>

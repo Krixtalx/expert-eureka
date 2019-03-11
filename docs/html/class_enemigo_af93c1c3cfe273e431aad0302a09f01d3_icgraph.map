@@ -1,0 +1,4 @@
+<map id="Enemigo::getDamage" name="Enemigo::getDamage">
+<area shape="rect" id="node1" title="Getter del atributo Damage." alt="" coords="143,5,289,32"/>
+<area shape="rect" id="node2" href="$_funciones_auxiliares_8h.html#a4cae0c5d19e7197fa86f5c68cb395464" title="Funcion encargada del daño del Enemigo al PersonajeVideojuego." alt="" coords="5,5,95,32"/>
+</map>

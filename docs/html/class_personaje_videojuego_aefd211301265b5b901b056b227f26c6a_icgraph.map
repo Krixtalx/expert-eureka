@@ -1,0 +1,5 @@
+<map id="PersonajeVideojuego::GetManaAct" name="PersonajeVideojuego::GetManaAct">
+<area shape="rect" id="node1" title="Getter del atributo ManaAct." alt="" coords="180,23,324,65"/>
+<area shape="rect" id="node2" href="$_funciones_auxiliares_8h.html#a6898dfbf86f750c0a34b8d5df97a81e1" title="Función encargada de mostrar la vida y maná actual del personaje." alt="" coords="5,5,132,32"/>
+<area shape="rect" id="node3" href="$_funciones_auxiliares_8h.html#ae241fbb0dccd1897ded0a32efcb55824" title="Función encargada de iniciar el combate." alt="" coords="33,56,105,83"/>
+</map>

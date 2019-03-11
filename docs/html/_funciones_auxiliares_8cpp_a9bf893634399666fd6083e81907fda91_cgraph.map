@@ -1,0 +1,6 @@
+<map id="mostrarVidaEnemigo" name="mostrarVidaEnemigo">
+<area shape="rect" id="node1" title="Función encargada de mostrar la vida del enemigo." alt="" coords="5,56,148,83"/>
+<area shape="rect" id="node2" href="$class_enemigo.html#aef906c4b96985b9c92ebf9618d9dda6e" title="Getter del atributo Nombre." alt="" coords="199,5,343,32"/>
+<area shape="rect" id="node3" href="$class_enemigo.html#abb60a4bf8befba3d82ddf79ef1c2f5e4" title="Getter del atributo VidaAct." alt="" coords="199,56,344,83"/>
+<area shape="rect" id="node4" href="$class_enemigo.html#af79af8ce677b4385a6f603cc1e077241" title="Getter del atributo VidaMax." alt="" coords="196,107,347,133"/>
+</map>

@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['getconsumohab1',['getConsumoHab1',['../class_personaje_videojuego.html#a40b070f886896c05ed1dfcfc631a4baa',1,'PersonajeVideojuego']]],
+  ['getconsumohab2',['getConsumoHab2',['../class_personaje_videojuego.html#a346253cc52d09ab6167847edca186244',1,'PersonajeVideojuego']]],
+  ['getdamage',['getDamage',['../class_arma.html#a20f2d4f9615675c9c1833576202217cc',1,'Arma::getDamage()'],['../class_enemigo.html#af93c1c3cfe273e431aad0302a09f01d3',1,'Enemigo::getDamage()'],['../class_personaje_videojuego.html#a56976a987af7a47375e061ddbc9c7814',1,'PersonajeVideojuego::GetDamage()']]],
+  ['getexperiencia',['getExperiencia',['../class_enemigo.html#a50ca67547b39eaf8cfcc740537857fdf',1,'Enemigo::getExperiencia()'],['../class_personaje_videojuego.html#a357ef7b280fbbca6d678e430da887ba8',1,'PersonajeVideojuego::getExperiencia()']]],
+  ['getfuerza',['getFuerza',['../class_personaje_videojuego.html#a90ad20cd561419e5f16c4ae32637a8c9',1,'PersonajeVideojuego']]],
+  ['getinteligencia',['getInteligencia',['../class_personaje_videojuego.html#a619fd7c65807ab04b810051e0f0b301b',1,'PersonajeVideojuego']]],
+  ['getmana',['GetMana',['../class_pocion.html#a431412ffe35f49ead265bd98717c06ec',1,'Pocion']]],
+  ['getmanaact',['GetManaAct',['../class_personaje_videojuego.html#aefd211301265b5b901b056b227f26c6a',1,'PersonajeVideojuego']]],
+  ['getmanamax',['GetManaMax',['../class_personaje_videojuego.html#a58111800d2315c70bb8f3a2cdfac5f9d',1,'PersonajeVideojuego']]],
+  ['getnivel',['getNivel',['../class_personaje_videojuego.html#ab22fbc6ab766244b3a561ca2b29bbe8d',1,'PersonajeVideojuego']]],
+  ['getnombre',['GetNombre',['../class_pocion.html#aba857c39ec2e3cd8d6ca4aeb39b1fa95',1,'Pocion::GetNombre()'],['../class_arma.html#a9676bd126b3c87c2a0db36099dec9065',1,'Arma::getNombre()'],['../class_enemigo.html#aef906c4b96985b9c92ebf9618d9dda6e',1,'Enemigo::getNombre()'],['../class_personaje_videojuego.html#a75865ab7b4892b9297c732218fea9422',1,'PersonajeVideojuego::getNombre()']]],
+  ['getnpociones',['GetNpociones',['../class_pocion.html#a941796cd45e32a7b48acac5b2dfbb33d',1,'Pocion']]],
+  ['getpocion',['getPocion',['../class_personaje_videojuego.html#a6d2d70da9e050ba93e1f9bc9251b33c8',1,'PersonajeVideojuego']]],
+  ['getposx',['GetPosX',['../class_personaje_videojuego.html#aba3de9d518998430c3aeb1d157ea6a13',1,'PersonajeVideojuego']]],
+  ['getposy',['GetPosY',['../class_personaje_videojuego.html#a9c56299a7c529c8aa40b6533b7bf7411',1,'PersonajeVideojuego']]],
+  ['getvida',['GetVida',['../class_pocion.html#a16d879b3174afa633aeb923ce64efcec',1,'Pocion']]],
+  ['getvidaact',['GetVidaAct',['../class_personaje_videojuego.html#a6bfa53560c746921773f5ec8bff99ff2',1,'PersonajeVideojuego::GetVidaAct()'],['../class_enemigo.html#abb60a4bf8befba3d82ddf79ef1c2f5e4',1,'Enemigo::getVidaAct()']]],
+  ['getvidamax',['getVidaMax',['../class_enemigo.html#af79af8ce677b4385a6f603cc1e077241',1,'Enemigo::getVidaMax()'],['../class_personaje_videojuego.html#ac62b2004ebb2efa93071f92a863c92f4',1,'PersonajeVideojuego::GetVidaMax()']]],
+  ['getvitalidad',['getVitalidad',['../class_personaje_videojuego.html#a83a6aad025437e7303f7d65d7e56518a',1,'PersonajeVideojuego']]]
+];

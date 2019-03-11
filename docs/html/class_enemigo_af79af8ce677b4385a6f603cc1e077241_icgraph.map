@@ -1,0 +1,5 @@
+<map id="Enemigo::getVidaMax" name="Enemigo::getVidaMax">
+<area shape="rect" id="node1" title="Getter del atributo VidaMax." alt="" coords="316,5,467,32"/>
+<area shape="rect" id="node2" href="$_funciones_auxiliares_8cpp.html#a9bf893634399666fd6083e81907fda91" title="Función encargada de mostrar la vida del enemigo." alt="" coords="125,5,268,32"/>
+<area shape="rect" id="node3" href="$_funciones_auxiliares_8h.html#ae241fbb0dccd1897ded0a32efcb55824" title="Función encargada de iniciar el combate." alt="" coords="5,5,77,32"/>
+</map>

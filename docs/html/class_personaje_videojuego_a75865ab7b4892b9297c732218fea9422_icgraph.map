@@ -1,0 +1,6 @@
+<map id="PersonajeVideojuego::getNombre" name="PersonajeVideojuego::getNombre">
+<area shape="rect" id="node1" title="Getter del atributo nombre." alt="" coords="180,49,324,90"/>
+<area shape="rect" id="node2" href="$_funciones_auxiliares_8h.html#a6898dfbf86f750c0a34b8d5df97a81e1" title="Función encargada de mostrar la vida y maná actual del personaje." alt="" coords="5,5,132,32"/>
+<area shape="rect" id="node3" href="$_funciones_auxiliares_8h.html#ae241fbb0dccd1897ded0a32efcb55824" title="Función encargada de iniciar el combate." alt="" coords="33,56,105,83"/>
+<area shape="rect" id="node4" href="$_funciones_auxiliares_8h.html#ab7132c9f4b7b2ca712193edc84a6f3d2" title="Función que determina si el combate ha finalizado o no." alt="" coords="25,107,113,133"/>
+</map>

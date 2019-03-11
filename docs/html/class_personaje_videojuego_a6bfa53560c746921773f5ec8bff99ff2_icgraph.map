@@ -1,0 +1,7 @@
+<map id="PersonajeVideojuego::GetVidaAct" name="PersonajeVideojuego::GetVidaAct">
+<area shape="rect" id="node1" title="Getter del atributo VidaAct." alt="" coords="180,74,324,115"/>
+<area shape="rect" id="node2" href="$_funciones_auxiliares_8h.html#a4cae0c5d19e7197fa86f5c68cb395464" title="Funcion encargada del daño del Enemigo al PersonajeVideojuego." alt="" coords="24,5,113,32"/>
+<area shape="rect" id="node3" href="$_funciones_auxiliares_8h.html#a6898dfbf86f750c0a34b8d5df97a81e1" title="Función encargada de mostrar la vida y maná actual del personaje." alt="" coords="5,56,132,83"/>
+<area shape="rect" id="node4" href="$_funciones_auxiliares_8h.html#ab7132c9f4b7b2ca712193edc84a6f3d2" title="Función que determina si el combate ha finalizado o no." alt="" coords="25,107,113,133"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="43,157,94,184"/>
+</map>

@@ -1,0 +1,38 @@
+<map id="combate" name="combate">
+<area shape="rect" id="node1" title="Función encargada de iniciar el combate." alt="" coords="5,657,77,684"/>
+<area shape="rect" id="node2" href="$_funciones_auxiliares_8cpp.html#a2be8995ad7028f8b7f560c01cc9305d9" title="Función encargada de limpiar la consola." alt="" coords="155,5,248,32"/>
+<area shape="rect" id="node3" href="$class_enemigo.html#aef906c4b96985b9c92ebf9618d9dda6e" title="Getter del atributo Nombre." alt="" coords="337,12,481,39"/>
+<area shape="rect" id="node4" href="$_funciones_auxiliares_8cpp.html#a9bf893634399666fd6083e81907fda91" title="Función encargada de mostrar la vida del enemigo." alt="" coords="130,107,273,133"/>
+<area shape="rect" id="node7" href="$_funciones_auxiliares_8cpp.html#a6898dfbf86f750c0a34b8d5df97a81e1" title="Función encargada de mostrar la vida y maná actual del personaje." alt="" coords="138,733,265,760"/>
+<area shape="rect" id="node8" href="$class_personaje_videojuego.html#a75865ab7b4892b9297c732218fea9422" title="Getter del atributo nombre." alt="" coords="337,661,481,702"/>
+<area shape="rect" id="node11" href="$class_personaje_videojuego.html#aefd211301265b5b901b056b227f26c6a" title="Getter del atributo ManaAct." alt="" coords="337,974,481,1015"/>
+<area shape="rect" id="node13" href="$class_personaje_videojuego.html#a6d2d70da9e050ba93e1f9bc9251b33c8" title="Getter del atributo Pocion." alt="" coords="129,835,273,877"/>
+<area shape="rect" id="node14" href="$class_pocion.html#a941796cd45e32a7b48acac5b2dfbb33d" title="Getter del atributo Npociones." alt="" coords="125,901,277,928"/>
+<area shape="rect" id="node15" href="$class_personaje_videojuego.html#a40b070f886896c05ed1dfcfc631a4baa" title="Getter del atributo consumoHab1." alt="" coords="129,953,273,994"/>
+<area shape="rect" id="node16" href="$class_personaje_videojuego.html#a346253cc52d09ab6167847edca186244" title="Getter del atributo consumoHab2." alt="" coords="129,1018,273,1059"/>
+<area shape="rect" id="node17" href="$class_personaje_videojuego.html#a7bb9426b984a05f28bc56fdb3b5e7f7e" title="Metodo encargado de quitarle vida al &quot;Enemigo&quot; golpeado en función al daño del arma." alt="" coords="129,158,273,199"/>
+<area shape="rect" id="node21" href="$_funciones_auxiliares_8cpp.html#ab7132c9f4b7b2ca712193edc84a6f3d2" title="Función que determina si el combate ha finalizado o no." alt="" coords="157,443,245,469"/>
+<area shape="rect" id="node27" href="$class_personaje_videojuego.html#a786a22ea5e4435ff37e5408cc38e3b74" title="Setter del atributo VidaAct." alt="" coords="337,595,481,637"/>
+<area shape="rect" id="node28" href="$class_personaje_videojuego.html#af7a6c100989892a52554ed398d698117" title="Metodo encargado de quitarle vida al &quot;Enemigo&quot; golpeado en función al daño del arma." alt="" coords="129,223,273,265"/>
+<area shape="rect" id="node29" href="$class_personaje_videojuego.html#a519137008dbce0fa14caa6043295a727" title="Metodo encargado de quitarle vida al &quot;Enemigo&quot; golpeado en función al daño del arma." alt="" coords="129,289,273,330"/>
+<area shape="rect" id="node30" href="$class_personaje_videojuego.html#a8db44a481bf14ee47aa6aa6eba570f02" title="Toma una pocion del vector de pociones." alt="" coords="129,1083,273,1125"/>
+<area shape="rect" id="node34" href="$class_personaje_videojuego.html#a870443f1349c723583499562d6e7b56f" title="Incrementa el mana actual según &quot;cantidad&quot;." alt="" coords="129,1149,273,1190"/>
+<area shape="rect" id="node35" href="$_funciones_auxiliares_8cpp.html#a4cae0c5d19e7197fa86f5c68cb395464" title="Funcion encargada del daño del Enemigo al PersonajeVideojuego." alt="" coords="157,683,246,709"/>
+<area shape="rect" id="node5" href="$class_enemigo.html#abb60a4bf8befba3d82ddf79ef1c2f5e4" title="Getter del atributo VidaAct." alt="" coords="336,113,481,140"/>
+<area shape="rect" id="node6" href="$class_enemigo.html#af79af8ce677b4385a6f603cc1e077241" title="Getter del atributo VidaMax." alt="" coords="333,63,484,89"/>
+<area shape="rect" id="node9" href="$class_personaje_videojuego.html#a6bfa53560c746921773f5ec8bff99ff2" title="Getter del atributo VidaAct." alt="" coords="337,726,481,767"/>
+<area shape="rect" id="node10" href="$class_personaje_videojuego.html#ac62b2004ebb2efa93071f92a863c92f4" title="Getter del atributo VidaMax." alt="" coords="337,843,481,885"/>
+<area shape="rect" id="node12" href="$class_personaje_videojuego.html#a58111800d2315c70bb8f3a2cdfac5f9d" title="Getter del atributo ManaMax." alt="" coords="337,909,481,950"/>
+<area shape="rect" id="node18" href="$class_enemigo.html#a5d3b9fc52408542954b8fc216e639d2f" title="Setter del atributo vidaAct." alt="" coords="345,231,472,257"/>
+<area shape="rect" id="node19" href="$class_personaje_videojuego.html#a56976a987af7a47375e061ddbc9c7814" title="Método que obtiene el daño del arma equipada." alt="" coords="337,165,481,206"/>
+<area shape="rect" id="node20" href="$class_arma.html#a20f2d4f9615675c9c1833576202217cc" title="Getter del atributo damage." alt="" coords="540,172,667,199"/>
+<area shape="rect" id="node22" href="$class_enemigo.html#a50ca67547b39eaf8cfcc740537857fdf" title=" " alt="" coords="325,413,492,440"/>
+<area shape="rect" id="node23" href="$class_personaje_videojuego.html#a357ef7b280fbbca6d678e430da887ba8" title=" " alt="" coords="337,465,481,506"/>
+<area shape="rect" id="node24" href="$class_personaje_videojuego.html#ab22fbc6ab766244b3a561ca2b29bbe8d" title=" " alt="" coords="337,530,481,571"/>
+<area shape="rect" id="node25" href="$class_personaje_videojuego.html#a4ccb27588eb9a97bc91c0fd2b1f873d3" title="Método encarga de administrar la subida de nivel del personaje." alt="" coords="337,282,481,323"/>
+<area shape="rect" id="node26" href="$class_personaje_videojuego.html#a31433885b36a5df74e3a98bebf455166" title=" " alt="" coords="337,347,481,389"/>
+<area shape="rect" id="node31" href="$class_pocion.html#a16d879b3174afa633aeb923ce64efcec" title="Getter del atributo Vida." alt="" coords="350,1040,467,1067"/>
+<area shape="rect" id="node32" href="$class_pocion.html#a431412ffe35f49ead265bd98717c06ec" title="Getter del atributo Mana." alt="" coords="347,1091,470,1117"/>
+<area shape="rect" id="node33" href="$class_pocion.html#ae76f3dbb282140d88fac7504a705818a" title="Setter del atributo Npociones." alt="" coords="333,1141,484,1168"/>
+<area shape="rect" id="node36" href="$class_enemigo.html#af93c1c3cfe273e431aad0302a09f01d3" title="Getter del atributo Damage." alt="" coords="335,792,482,819"/>
+</map>

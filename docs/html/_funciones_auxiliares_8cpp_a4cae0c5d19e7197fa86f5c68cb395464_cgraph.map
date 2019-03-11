@@ -1,0 +1,6 @@
+<map id="ataqueMalo" name="ataqueMalo">
+<area shape="rect" id="node1" title="Funcion encargada del daño del Enemigo al PersonajeVideojuego." alt="" coords="5,78,95,105"/>
+<area shape="rect" id="node2" href="$class_personaje_videojuego.html#a786a22ea5e4435ff37e5408cc38e3b74" title="Setter del atributo VidaAct." alt="" coords="144,5,288,47"/>
+<area shape="rect" id="node3" href="$class_personaje_videojuego.html#a6bfa53560c746921773f5ec8bff99ff2" title="Getter del atributo VidaAct." alt="" coords="144,71,288,112"/>
+<area shape="rect" id="node4" href="$class_enemigo.html#af93c1c3cfe273e431aad0302a09f01d3" title="Getter del atributo Damage." alt="" coords="143,137,289,163"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="PersonajeVideojuego::tomarPocion" name="PersonajeVideojuego::tomarPocion">
+<area shape="rect" id="node1" title="Toma una pocion del vector de pociones." alt="" coords="5,49,149,90"/>
+<area shape="rect" id="node2" href="$class_pocion.html#a16d879b3174afa633aeb923ce64efcec" title="Getter del atributo Vida." alt="" coords="214,5,331,32"/>
+<area shape="rect" id="node3" href="$class_pocion.html#a431412ffe35f49ead265bd98717c06ec" title="Getter del atributo Mana." alt="" coords="211,56,334,83"/>
+<area shape="rect" id="node4" href="$class_pocion.html#ae76f3dbb282140d88fac7504a705818a" title="Setter del atributo Npociones." alt="" coords="197,107,348,133"/>
+</map>

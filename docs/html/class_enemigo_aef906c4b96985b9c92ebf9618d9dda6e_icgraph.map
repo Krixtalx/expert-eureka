@@ -1,0 +1,6 @@
+<map id="Enemigo::getNombre" name="Enemigo::getNombre">
+<area shape="rect" id="node1" title="Getter del atributo Nombre." alt="" coords="316,56,460,83"/>
+<area shape="rect" id="node2" href="$_funciones_auxiliares_8cpp.html#a9bf893634399666fd6083e81907fda91" title="Función encargada de mostrar la vida del enemigo." alt="" coords="125,5,268,32"/>
+<area shape="rect" id="node3" href="$_funciones_auxiliares_8h.html#ae241fbb0dccd1897ded0a32efcb55824" title="Función encargada de iniciar el combate." alt="" coords="5,31,77,57"/>
+<area shape="rect" id="node4" href="$_funciones_auxiliares_8h.html#ab7132c9f4b7b2ca712193edc84a6f3d2" title="Función que determina si el combate ha finalizado o no." alt="" coords="153,107,241,133"/>
+</map>

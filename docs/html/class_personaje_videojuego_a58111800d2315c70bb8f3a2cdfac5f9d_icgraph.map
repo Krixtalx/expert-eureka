@@ -1,0 +1,4 @@
+<map id="PersonajeVideojuego::GetManaMax" name="PersonajeVideojuego::GetManaMax">
+<area shape="rect" id="node1" title="Getter del atributo ManaMax." alt="" coords="180,5,324,47"/>
+<area shape="rect" id="node2" href="$_funciones_auxiliares_8h.html#a6898dfbf86f750c0a34b8d5df97a81e1" title="Función encargada de mostrar la vida y maná actual del personaje." alt="" coords="5,13,132,39"/>
+</map>
