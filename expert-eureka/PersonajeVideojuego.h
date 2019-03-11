@@ -6,7 +6,6 @@
  */
 
 
-
 #ifndef PERSONAJEVIDEOJUEGO_H
 #define PERSONAJEVIDEOJUEGO_H
 
@@ -21,6 +20,7 @@ public:
     PersonajeVideojuego();
     PersonajeVideojuego(std::string nombre, int x, int y, int vida, int mana, Arma* Arma);
     PersonajeVideojuego(std::string nombre, int x, int y, int vida, int mana, Arma* Arma, Pocion pociones[]);
+    PersonajeVideojuego(std::string nombre, int x, int y, int vitalidad, int inteligencia, int fuerza, Arma* Arma, Pocion pociones[]);
     PersonajeVideojuego(const PersonajeVideojuego& orig);
     virtual ~PersonajeVideojuego();
 
@@ -32,6 +32,7 @@ public:
     void incrementarVida(int cantidad);
     void incrementarMana(int cantidad);
     void tomarPocion(int tipoPocion);
+    void subidaNivel(int vitalidad, int inteligencia, int fuerza);
 
 
     int getConsumoHab2() const;
@@ -47,6 +48,16 @@ public:
     PersonajeVideojuego& setNombre(std::string nombre);
     std::string getNombre() const;
     void setVidaAct(int vidaAct);
+    void setFuerza(int fuerza);
+    int getFuerza() const;
+    void setInteligencia(int inteligencia);
+    int getInteligencia() const;
+    void setVitalidad(int vitalidad);
+    int getVitalidad() const;
+    void setExperiencia(int experiencia);
+    int getExperiencia() const;
+    void setNivel(int nivel);
+    int getNivel() const;
 
 private:
 
@@ -71,7 +82,7 @@ private:
     
     int vitalidad=12;
     int inteligencia=10;
-    int fuerza=12;
+    int fuerza=10;
 };
 
 #endif /* PERSONAJEVIDEOJUEGO_H */

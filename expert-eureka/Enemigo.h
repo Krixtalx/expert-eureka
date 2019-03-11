@@ -18,10 +18,12 @@ class Enemigo {
 public:
     Enemigo() = default;
     Enemigo(std::string nombre, int vida, int damageBasico);
+    Enemigo(std::string nombre, int vida, int damageBasico, int experiencia);
     Enemigo(const Enemigo& orig);
     virtual ~Enemigo();
 
-    int getVida() const;
+    int getVidaAct() const;
+    int getVidaMax() const;
     int getDamage() const;
 
     Enemigo& SetVida(int vida);
@@ -31,8 +33,10 @@ public:
 private:
 
     std::string nombre = "Jiren";
-    int vida = 40;
+    int vidaAct = 40;
+    int vidaMax=40;
     int damageBasico = 5;
+    int experiencia=10;
 
 };
 

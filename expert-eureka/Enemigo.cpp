@@ -15,7 +15,19 @@
  * @param damageBasico
  */
 Enemigo::Enemigo(std::string nombre, int vida, int damageBasico) :
- nombre(nombre), vida(vida), damageBasico(damageBasico) {
+ nombre(nombre), vidaAct(vida),vidaMax(vida), damageBasico(damageBasico) {
+}
+
+/**
+ * @brief Constructor parametrizado de la clase Enemigo
+ * @param nombre: 
+ * @param vida
+ * @param mana
+ * @param damageBasico
+ * @param experiencia
+ */
+Enemigo::Enemigo(std::string nombre, int vida, int damageBasico, int experiencia) :
+ nombre(nombre), vidaAct(vida),vidaMax(vida), damageBasico(damageBasico), experiencia(experiencia) {
 }
 
 /**
@@ -25,7 +37,8 @@ Enemigo::Enemigo(std::string nombre, int vida, int damageBasico) :
 Enemigo::Enemigo(const Enemigo& orig) {
 
     this->nombre=orig.nombre;
-    this->vida=orig.vida;
+    this->vidaAct=orig.vidaAct;
+    this->vidaMax=orig.vidaMax;
     this->damageBasico=orig.damageBasico;
 
 }
@@ -34,11 +47,19 @@ Enemigo::~Enemigo() {
 }
 
 /**
- * @brief Getter del atributo Vida
- * @return vida
+ * @brief Getter del atributo VidaAct
+ * @return vidaAct
  */
-int Enemigo::getVida() const {
-    return vida;
+int Enemigo::getVidaAct() const {
+    return vidaAct;
+}
+
+/**
+ * @brief Getter del atributo VidaMax
+ * @return vidaMax
+ */
+int Enemigo::getVidaMax() const {
+    return vidaMax;
 }
 
 /**
@@ -50,12 +71,12 @@ int Enemigo::getDamage() const {
 }
 
 /**
- * @brief Setter del atributo vida
+ * @brief Setter del atributo vidaAct
  * @param vida: Nuevo valor del atributo vida
  */
 Enemigo& Enemigo::SetVida(int vida) {
     
-    this->vida = vida;
+    this->vidaAct = vida;
     
     return *this;
     
@@ -82,6 +103,3 @@ Enemigo& Enemigo::setNombre(std::string nombre) {
 std::string Enemigo::getNombre() const {
     return nombre;
 }
-
-
-

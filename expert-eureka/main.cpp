@@ -23,7 +23,7 @@ int main(int argc, char** argv) {
     
     const int TAMENEMIGOS = 5;
     const int TAMARMAS = 5;
-    const int TAMPOCIONES=1;
+    const int TAMPOCIONES=2;
     
     
     int enemigosDerrotados = 0, indiceEnemigoAleatorio = 0;
@@ -36,23 +36,17 @@ int main(int argc, char** argv) {
 
         Arma armas[TAMARMAS] = { {"Espada de madera", 8}, {"Espada de metal", 10}, 
         {"Bastón de caramelo", 6}, {"Absorbe espíritus", 11}, {"Varita de Sauco", 13} };
-
-        //----------------------------------------------------------------------------------
-        
-        
         
         //----------ENEMIGOS-----------
         
         Enemigo enemigos[TAMENEMIGOS] = { {"Limo", 100, 4}, {"Minotauro", 200, 2}, {"Espíritu de fuego", 100, 6}, 
         {"Espíritu de hielo", 130, 5}, {"Grifo", 150, 7}  };
         
-        //----------------------------------------------------------------------------------
-        
         //---------POCIONES--------
         
-        Pocion pociones[2]={{"Pocion de vida",50,0,2},{"Pocion de Mana",0,50,2}};
+        Pocion pociones[TAMPOCIONES]={{"Pocion de vida",50,0,2},{"Pocion de Mana",0,50,2}};
         
-        Enemigo Limo("Limo", 100, 4);
+        
 
         cout << "Introduzca el nombre del Héroe: ";
         getline(cin>>ws, nombre);

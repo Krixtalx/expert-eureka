@@ -77,6 +77,8 @@ int enemigoAleatorio(int tamEnemigos) {
 //-------------------------------COMBATE-------------------------------------------------------------------------
 
 
+
+
 /**
  * @brief Funcion encargada del daño del Enemigo al PersonajeVideojuego
  * @param heroe: PersonajeVideojuego que recibirá el daño
@@ -91,7 +93,7 @@ void ataqueMalo(PersonajeVideojuego& heroe, Enemigo& malo){
  * @param malo: Enemigo del que se mostrará la vida
  */
 void mostrarVidaEnemigo(Enemigo& malo){
-    cout << endl << "Vida " << malo.getNombre() << ": " << malo.getVida();
+    cout << endl << "Vida " << malo.getNombre() << ": " << malo.getVidaAct()<<"/"<<malo.getVidaMax();
 }
 
 /**
@@ -99,8 +101,8 @@ void mostrarVidaEnemigo(Enemigo& malo){
  * @param heroe:
  */
 void mostrarAtribHeroe(PersonajeVideojuego& heroe){
-    cout<<endl<< "Vida de "<<heroe.getNombre()<<": "<<heroe.GetVidaAct();
-    cout<<"        "<< "Mana de "<<heroe.getNombre()<<": "<<heroe.GetManaAct();
+    cout<<endl<< "Vida de "<<heroe.getNombre()<<": "<<heroe.GetVidaAct()<<"/"<<heroe.GetVidaMax();
+    cout<<"        "<< "Mana de "<<heroe.getNombre()<<": "<<heroe.GetManaAct()<<"/"<<heroe.GetManaMax();
 }
 
 /**
@@ -228,7 +230,7 @@ void combate(PersonajeVideojuego& heroe, Enemigo malo, int& enemigosDerrotados){
  */
 void finCombate(PersonajeVideojuego& heroe, Enemigo& malo, bool& terminar, int& enemigosDerrotados) {
     
-        if(malo.getVida() <= 0) {
+        if(malo.getVidaAct() <= 0) {
 
             malo.SetVida(0);
             terminar = true;
