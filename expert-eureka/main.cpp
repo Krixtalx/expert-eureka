@@ -39,19 +39,19 @@ int main(int argc, char** argv) {
         
         //----------ENEMIGOS-----------
         
-        Enemigo enemigos[TAMENEMIGOS] = { {"Limo", 100, 4}, {"Minotauro", 200, 2}, {"Espíritu de fuego", 100, 6}, 
-        {"Espíritu de hielo", 130, 5}, {"Grifo", 150, 7}  };
-        
+        Enemigo enemigos[TAMENEMIGOS] = {{"Limo", 100, 4, 8}, {"Minotauro", 200, 2, 12}, {"Espíritu de fuego", 100, 6, 11}, 
+        {"Espíritu de hielo", 130, 5, 10}, {"Grifo", 150, 7, 20}};
+
         //---------POCIONES--------
         
-        Pocion pociones[TAMPOCIONES]={{"Pocion de vida",50,0,2},{"Pocion de Mana",0,50,2}};
+        Pocion pociones[TAMPOCIONES]={{"Pocion de vida",60,0,4},{"Pocion de Mana",0,50,2}};
         
         
 
         cout << "Introduzca el nombre del Héroe: ";
         getline(cin>>ws, nombre);
 
-        PersonajeVideojuego Heroe(nombre, 0, 0, 120, 50, &armas[0],&pociones[0]);
+        PersonajeVideojuego Heroe(nombre, 0, 0, 12, 10, 10, &armas[0],&pociones[0]);
 
         bool fight = false;
 

@@ -40,7 +40,7 @@ Enemigo::Enemigo(const Enemigo& orig) {
     this->vidaAct=orig.vidaAct;
     this->vidaMax=orig.vidaMax;
     this->damageBasico=orig.damageBasico;
-
+    this->experiencia=orig.experiencia;
 }
 
 Enemigo::~Enemigo() {
@@ -102,4 +102,8 @@ Enemigo& Enemigo::setNombre(std::string nombre) {
  */
 std::string Enemigo::getNombre() const {
     return nombre;
+}
+
+int Enemigo::getExperiencia() const {
+    return experiencia;
 }

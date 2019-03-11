@@ -29,6 +29,7 @@ public:
     Enemigo& SetVida(int vida);
     Enemigo& setNombre(std::string nombre);
     std::string getNombre() const;
+    int getExperiencia() const;
 
 private:
 
